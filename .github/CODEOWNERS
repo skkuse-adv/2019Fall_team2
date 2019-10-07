@@ -1,0 +1,18 @@
+# This is a comment. Each line is a file pattern followed by one or more owners.
+# For more details, visit https://help.github.com/articles/about-codeowners/
+#
+# Note that the current version of github.com does not translate @org/team-name,
+# even though the github webpage depicts how to use @org/team-name as well as @username format.
+# So, We must write all member IDs manually instead of @org/team-name.
+
+# in order that all members of a repository are supposed to review each other
+*                @beandkay @leemgs 
+
+# For /docs/, reviewers are limited to those who understand documentation
+/docs/           @leemgs @beandkay  @JangHanbin @ajid951125
+
+# For /src/, reviewers are limited to those who develop source code
+/src/            @leemgs @beandkay  @JangHanbin @ajid951125
+
+# For /packaging/, reviewers are limited to those who have some RPM packaging experiences
+/debian/         @leemgs @beandkay  @JangHanbin @ajid951125
