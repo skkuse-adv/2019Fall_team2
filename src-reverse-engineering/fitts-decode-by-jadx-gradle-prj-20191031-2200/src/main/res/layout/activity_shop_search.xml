@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <kr.co.popone.fitts.feature.search.SearchBar android:id="@+id/searchBar" android:layout_width="match_parent" android:layout_height="50dp" android:hint="검색"/>
+    <kr.co.popone.fitts.feature.search.SearchHistoryView android:id="@+id/searchHistoryView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <FrameLayout android:id="@+id/searchResultView" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipeRefreshLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@+id/shopResultView" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <ScrollView android:id="@+id/emptyResultView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:paddingTop="28dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                <TextView android:textSize="14sp" android:textColor="@color/gray6" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="아직 등록되지 않은 쇼핑몰입니다" android:drawableEnd="@drawable/no_search_result_icon"/>
+                <TextView android:textSize="14sp" android:textColor="@color/point" android:id="@+id/inputDirectLinkButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="직접 링크를 입력해주세요…"/>
+                <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="30.5dp"/>
+                <TextView android:textSize="20sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.5dp" android:text="링크 복사 방법"/>
+                <androidx.gridlayout.widget.GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="17dp" app:columnCount="2">
+                    <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="14dp" android:layout_height="wrap_content" android:text="1" android:fontFamily="@font/montserrat_bold"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="200dp" android:layout_height="wrap_content" android:text="웹브라우저를 열고 구매한 쇼핑몰의 상품상세페이지로 간다." android:lineSpacingExtra="3dp"/>
+                    <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="14dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="2" android:fontFamily="@font/montserrat_bold"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="상세페이지의 링크를 복사한다."/>
+                </androidx.gridlayout.widget.GridLayout>
+                <TextView android:textSize="12sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:text="&lt;인터넷 이용시&gt;" android:layout_marginStart="13dp"/>
+                <ImageView android:layout_width="270dp" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:src="@drawable/search_shop_empty_internet" android:layout_marginStart="13dp"/>
+                <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="#157ad1" android:layout_width="220dp" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="주소창을 길게 눌러 모두 선택을 선택한 후 복사를 누르면 됩니다." android:lineSpacingExtra="3dp" android:layout_marginStart="13dp"/>
+                <TextView android:textSize="12sp" android:textColor="@color/gray4" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="13dp" android:text="&lt;네이버 이용시&gt;" android:layout_marginStart="13dp"/>
+                <ImageView android:layout_width="270dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:src="@drawable/search_shop_empty_naver" android:layout_marginStart="13dp"/>
+                <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="#157ad1" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="버튼을 누르고 URL복사 버튼을 누르면 됩니다." android:drawablePadding="4dp" android:drawableStart="@drawable/search_shop_icon_url_copy" android:layout_marginStart="13dp"/>
+                <androidx.gridlayout.widget.GridLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" app:columnCount="2">
+                    <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="14dp" android:layout_height="wrap_content" android:text="3" android:fontFamily="@font/montserrat_bold"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/emptyResultLinkPasteDescriptionTextView" android:layout_width="235dp" android:layout_height="wrap_content" android:text="포스트작성 페이지의 링크 붙여넣기를 누르고 붙여넣으면 끝!" android:lineSpacingExtra="3dp"/>
+                </androidx.gridlayout.widget.GridLayout>
+                <Space android:layout_width="match_parent" android:layout_height="30dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

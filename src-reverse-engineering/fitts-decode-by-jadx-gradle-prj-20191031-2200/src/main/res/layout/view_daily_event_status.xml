@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@drawable/background_appliable_event_status_item" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textStyle="bold" android:textColor="@color/gray6" android:layout_gravity="center_vertical" android:id="@+id/dayTextView" android:layout_width="60dp" android:layout_height="wrap_content" android:textAlignment="center"/>
+    <View android:background="@color/gray1" android:layout_width="0.5dp" android:layout_height="match_parent" android:layout_marginTop="6dp" android:layout_marginBottom="6dp"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/itemLayout" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

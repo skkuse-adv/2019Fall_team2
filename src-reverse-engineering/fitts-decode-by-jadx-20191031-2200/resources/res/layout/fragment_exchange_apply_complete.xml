@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/toolbarLayout" android:layout_width="0dp" android:layout_height="48dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <FrameLayout android:id="@+id/backButton" android:layout_width="wrap_content" android:layout_height="0dp" android:paddingStart="22dp" android:paddingEnd="22dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:layout_gravity="center" android:id="@+id/backButtonImageView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_back" android:scaleType="fitXY" android:tint="@color/gray6"/>
+        </FrameLayout>
+        <TextView android:textSize="17sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/titleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환 상세정보" android:layout_marginStart="10dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toEndOf="@+id/backButton" app:layout_constraintTop_toTopOf="0" app:layout_constraintVertical_bias="0.5"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textExchangeDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:fontFamily="@font/montserrat_regular"/>
+                <TextView android:textSize="22sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="교환 신청이 완료되었습니다" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="14dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:layout_marginBottom="14dp" android:text="교환 안내" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:id="@+id/layoutExchangeInfoUserFault" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TableRow android:layout_marginBottom="20dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="배송비" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="판매자마다 계약된 택배사가 상이합니다.\10해당 판매자의 정책을 확인해주세요."/>
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="9dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="결제방법" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="43dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="상품에 직접 동봉 또는\10판매처의 배송비 입금계좌로 계좌이체" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="20dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환 배송비 미결제 시 추가 입금 요청이 발생할 수\10있습니다."/>
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="12dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환방법" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/exchange_method_desc"/>
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/exchange_method_sub_desc1"/>
+                    </TableRow>
+                </TableLayout>
+                <TableLayout android:id="@+id/layoutExchangeInfoSellerFault" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TableRow android:layout_marginBottom="12dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환방법" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="43dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/exchange_method_desc"/>
+                    </TableRow>
+                    <TableRow android:layout_marginBottom="10dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="43dp"/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/exchange_method_sub_desc1"/>
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="43dp"/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/exchange_method_sub_desc2"/>
+                    </TableRow>
+                </TableLayout>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="34dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="판매자 정보" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+                    <TableRow>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="판매자" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="54dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textSellerName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="20dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="주소" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textSellerAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                </TableLayout>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="34dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="교환 정보" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+                    <TableRow android:layout_marginBottom="9dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="상품" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textProductSummary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="#434344" android:id="@+id/textProductOptionSummary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="14dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환 희망 옵션" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="14dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textExchangeProductOption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="14dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환 사유" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textExchangeReason" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                </TableLayout>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="34dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:id="@+id/textExchangeCreditCard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="환불 방법" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TextView android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/textExchangeCreditDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="품절 등의 이유로 교환이 불가능한 경우\10구매 시 결제하신 수단으로 자동 환불될 예정입니다." android:fontFamily="@font/kopubdotum_pro_medium"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:id="@+id/textExchangeDeposit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="환불 받을 계좌" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TextView android:textSize="12sp" android:textColor="@color/gray4" android:id="@+id/textExchangeDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="품절 등의 이유로 교환이 불가능한 경우 해당 계좌로 환불됩니다." android:fontFamily="@font/kopubdotum_pro_medium"/>
+                <TableLayout android:id="@+id/tableBankInfo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TableRow android:layout_marginTop="14dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="은행" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textBankName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="20dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="계좌번호" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="43dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textBankAccount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                </TableLayout>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="34dp"/>
+                <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="교환 상품을 발송하지 않은 상태에서만 신청 취소가 가능합니다." android:fontFamily="@font/kopubdotum_pro_medium"/>
+                <TextView android:textSize="14sp" android:textColor="@color/gray7" android:gravity="center" android:id="@+id/buttonChangeMind" android:background="@drawable/background_round_white_gray7" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="16dp" android:text="신청취소" android:layout_weight="1" android:fontFamily="@font/kopubdotum_pro_medium"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/gray1" android:paddingTop="22dp" android:paddingBottom="22dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="24dp" android:layout_weight="1" android:paddingStart="24dp" android:paddingEnd="24dp">
+                <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="아래의 경우는 교환이 불가능할 수 있습니다." android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <TableRow>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- "/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="판매자의 사정으로 교환 불가 사유 발생 시"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="3dp">
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- "/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="판매자의 교환 정책을 확인하지 않고 상품을 발송한 경우"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="3dp">
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- "/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환 배송비 미결제 시 또는 판매자가 요청한 추가 금액 미지급 시"/>
+                    </TableRow>
+                </TableLayout>
+                <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="교환 신청 상품의 구매확정에 대한 안내" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <TableRow>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- "/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환 신청서 접수일을 기준으로 3주 후에 자동 구매확정 됩니다."/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="3dp">
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- "/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="주문상태가 [교환신청] 상태일지라도, [포스트 작성]을 완료하시면\10자동 구매확정 됩니다."/>
+                    </TableRow>
+                </TableLayout>
+                <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="교환 과정 (상품 수거 및 확인) 에서\10발생되는 문제는 핏츠측에서 관여하지 않습니다." android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="추가 문의사항은 플러스친구로 문의주시기 바랍니다." android:fontFamily="@font/kopubdotum_pro_bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

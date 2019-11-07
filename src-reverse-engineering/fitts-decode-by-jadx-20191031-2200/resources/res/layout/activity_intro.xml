@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.viewpager.widget.ViewPager android:id="@+id/viewPager" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        <me.relex.circleindicator.CircleIndicator android:id="@+id/indicatorView" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:ci_drawable="@drawable/intro_current_viewpager" app:ci_drawable_unselected="@drawable/intro_other_viewpager"/>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

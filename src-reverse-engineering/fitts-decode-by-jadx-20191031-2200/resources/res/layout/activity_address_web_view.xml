@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="0dp" android:layout_height="?attr/actionBarSize" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:titleTextAppearance="@style/ToolbarTitleAppearance" style="@style/Toolbar"/>
+    <androidx.core.widget.ContentLoadingProgressBar android:id="@+id/contentLoadingProgressBar" android:layout_width="match_parent" android:layout_height="2dp" app:layout_constraintBottom_toBottomOf="@+id/toolbar" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" style="?android:attr/progressBarStyleHorizontal"/>
+    <WebView android:id="@+id/webView" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

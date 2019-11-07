@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/toolbarLayout" android:layout_width="0dp" android:layout_height="48dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <FrameLayout android:id="@+id/backButton" android:layout_width="wrap_content" android:layout_height="0dp" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="16.5dp" android:layout_height="16.5dp" android:src="@drawable/button_cancel"/>
+        </FrameLayout>
+        <View android:background="@color/gray0" android:layout_width="0dp" android:layout_height="0.5dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="0dp" android:layout_height="0dp" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintBottom_toTopOf="@+id/buttonIdentification" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="30sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="95dp" android:text="포인트/쿠폰 사용을 위해\10본인인증이 필요해요" android:fontFamily="@font/kopubdotum_pro_bold" android:letterSpacing="-0.02"/>
+            <TextView android:textSize="16sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="27dp" android:text="7일 이내에 인증이 없을 경우\10사용할 수 없으니 꼭 인증해주시기 바랍니다." android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+            <TextView android:textSize="13sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="45dp" android:text="관련 법상 필요한 절차로 인증 목적 이외의\10다른 용도로 사용되지 않으니 안심하셔도 됩니다." android:letterSpacing="-0.02"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <Button android:textSize="17sp" android:textColor="@android:color/white" android:id="@+id/buttonIdentification" android:background="@drawable/button_rounded_event_apply" android:layout_width="0dp" android:layout_height="53dp" android:layout_marginBottom="24dp" android:text="본인 인증하기" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="17dp" android:layout_marginEnd="17dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" style="?android:attr/borderlessButtonStyle"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

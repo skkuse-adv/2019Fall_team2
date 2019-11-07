@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:id="@+id/scrollview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/layout_post_bottombar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/cover_image" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="fitXY" android:adjustViewBounds="true" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <TextView android:textSize="13sp" android:textColor="@android:color/white" android:id="@+id/viewCountTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:shadowColor="#4c000000" android:shadowDy="5" android:shadowRadius="25" android:alpha="0.7" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0"/>
+                <ImageView android:id="@+id/viewCountTimeSeparator" android:layout_width="2dp" android:layout_height="2dp" android:src="@drawable/img_ellipse" android:alpha="0.1" android:layout_marginStart="7dp" app:layout_constraintBottom_toBottomOf="@+id/viewCountTextView" app:layout_constraintStart_toEndOf="@+id/viewCountTextView" app:layout_constraintTop_toTopOf="@+id/viewCountTextView" app:layout_constraintVertical_bias="0.5"/>
+                <TextView android:textSize="13sp" android:textColor="#19ffffff" android:id="@+id/post_create_at" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#4c000000" android:shadowDy="5" android:shadowRadius="25" android:alpha="0.7" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="7dp" app:layout_constraintBottom_toBottomOf="@+id/viewCountTextView" app:layout_constraintStart_toEndOf="@+id/viewCountTimeSeparator" app:layout_constraintTop_toTopOf="@+id/viewCountTextView"/>
+                <TextView android:textSize="30sp" android:textStyle="bold" android:textColor="@android:color/white" android:ellipsize="end" android:id="@+id/post_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginBottom="9dp" android:maxLines="6" android:shadowColor="#60000000" android:shadowDy="5" android:shadowRadius="25" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:layout_constraintBottom_toTopOf="@+id/viewCountTextView" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+                <RatingBar android:id="@+id/post_rating" android:layout_width="wrap_content" android:layout_height="16dp" android:layout_marginBottom="17dp" android:progressDrawable="@drawable/rating_bar_post" android:numStars="5" android:isIndicator="true" app:layout_constraintBottom_toTopOf="@+id/post_title" app:layout_constraintStart_toStartOf="@+id/post_title"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout android:orientation="vertical" android:background="#ffffff" android:paddingLeft="24dp" android:paddingTop="10dp" android:paddingRight="24dp" android:paddingBottom="22dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/inactivity_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/profile_fitts" android:paddingTop="14dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/alarm_notify"/>
+                        <LinearLayout android:orientation="vertical" android:paddingTop="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="6dp">
+                            <TextView android:textSize="18sp" android:textStyle="normal|bold|italic" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" android:fontFamily="@font/proxima_nova_bold_italic"/>
+                            <RelativeLayout android:background="@drawable/balloon" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/inactivity_reason" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:lineSpacingExtra="6dp"/>
+                                <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@color/point" android:gravity="center_vertical" android:id="@+id/kakao_opnion_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="핏츠 플러스친구" android:drawablePadding="10dp" android:layout_below="@+id/inactivity_reason" android:drawableStart="@drawable/opinion_kakao" android:drawableEnd="@drawable/button_nav_next_blue" android:layout_alignParentEnd="true"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp"/>
+                </LinearLayout>
+                <RelativeLayout android:id="@+id/profile_layout" android:paddingTop="14dp" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:id="@+id/profile_left_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toStartOf="@+id/profile_right_layout">
+                        <TextView android:textSize="14sp" android:textStyle="normal|bold|italic" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/post_profile_by" android:fontFamily="@font/proxima_nova_bold_italic"/>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:textSize="20sp" android:textStyle="normal|bold|italic" android:textColor="@color/gray6" android:id="@+id/profile_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="9.5dp" android:fontFamily="@font/proxima_nova_bold_italic"/>
+                            <View android:id="@+id/fittieSuitBlue" android:background="@drawable/fittie_suit_blue_dot" android:visibility="invisible" android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="8dp" android:layout_marginStart="4dp"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_gravity="center" android:id="@+id/profile_type" android:layout_width="10dp" android:layout_height="10dp" android:tint="@color/gray4"/>
+                            <TextView android:textSize="15sp" android:textStyle="normal|bold|italic" android:textColor="@color/gray4" android:id="@+id/profile_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/proxima_nova_bold_italic"/>
+                        </LinearLayout>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray5" android:id="@+id/profile_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.5dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/profile_right_layout" android:paddingTop="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+                        <FrameLayout android:layout_gravity="center" android:layout_width="66dp" android:layout_height="66dp">
+                            <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profile_image" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                            <View android:background="@drawable/background_profile_fat" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                        </FrameLayout>
+                        <TextView android:textSize="14sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:id="@+id/follow_button" android:background="@android:color/transparent" android:paddingTop="11.5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="34dp"/>
+                <include android:layout_width="match_parent" android:layout_height="130dp" android:layout_marginTop="35dp" layout="@layout/view_post_buy_info"/>
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/post_product_button" android:background="@drawable/button_rounded_blue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" style="?android:attr/borderlessButtonStyle">
+                    <ImageView android:id="@+id/imageFittsStoreMark" android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/img_icon_fittspoint" android:tint="@android:color/white" android:layout_marginEnd="5dp"/>
+                    <TextView android:textSize="15sp" android:textColor="#ffffff" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="상품 상세정보 보러가기" android:includeFontPadding="false" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/post_image_list" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                <LinearLayout android:orientation="vertical" android:id="@+id/postFitLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="34dp"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="@string/post_fit_about"/>
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:layout_marginBottom="15dp" android:src="@drawable/quotes_img"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/post_about_fit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="7dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/postProductAboutLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_marginBottom="15dp" android:text="@string/post_product_about"/>
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="15dp" android:src="@drawable/quotes_img"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/post_about_product" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="7dp"/>
+                </LinearLayout>
+                <me.gujun.android.taggroup.TagGroup android:id="@+id/post_tag" android:layout_marginTop="14dp" android:layout_marginBottom="32dp" app:atg_borderColor="@color/gray3" app:atg_horizontalPadding="10dp" app:atg_horizontalSpacing="5dp" app:atg_textColor="#000000" app:atg_textSize="13sp" app:atg_verticalPadding="6dp" style="@style/TagGroup.Large"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layoutSamePost" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:background="@color/transparent27_gray2" android:layout_width="match_parent" android:layout_height="8dp"/>
+                <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="14dp" android:text="동일 상품의 포스트" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="24dp"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerSamePost" android:layout_width="match_parent" android:layout_height="123dp" android:layout_marginBottom="24dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layoutRelatedPost" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:background="@color/transparent27_gray2" android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginBottom="23dp"/>
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="14dp" android:layout_marginStart="24dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/point" android:id="@+id/textFittieId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="@font/proxima_nova_bold_italic"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="님과 유사한 체형의 핏티들이 많이 본" android:includeFontPadding="false" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="1dp"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerRelatedPost" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.appbar.AppBarLayout android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="48dp" app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:tag="transparent" android:layout_width="match_parent" android:layout_height="48dp" app:contentInsetStart="0dp">
+            <androidx.percentlayout.widget.PercentRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageButton android:id="@+id/back" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/button_black_back" android:layout_centerVertical="true" android:paddingStart="24dp" android:paddingEnd="24dp" android:layout_alignParentStart="true"/>
+                <ImageButton android:id="@+id/home" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/button_home" android:layout_centerVertical="true" android:paddingStart="24dp" android:paddingEnd="24dp" android:layout_alignParentEnd="true"/>
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/layout_post_bottombar" android:background="@drawable/bottom_bar" android:layout_width="match_parent" android:layout_height="53dp" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/like_button" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_marginStart="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:id="@+id/like_image" android:layout_width="20dp" android:layout_height="19dp" android:scaleType="fitXY"/>
+            <Space android:layout_width="5dp" android:layout_height="match_parent"/>
+            <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/like_count" android:tag="likes_count" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/comment_button" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_marginStart="30dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toEndOf="@+id/like_button" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:id="@+id/comment_image" android:background="@drawable/button_home_comment" android:layout_width="20dp" android:layout_height="18dp" android:scaleType="fitXY"/>
+            <Space android:layout_width="5dp" android:layout_height="match_parent"/>
+            <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/comment_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="댓글"/>
+        </LinearLayout>
+        <ImageButton android:id="@+id/post_setting_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="0dp" android:src="@drawable/more" android:paddingStart="14dp" android:paddingEnd="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/textTitlePosting" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginStart="24dp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="지금 포스팅하시면 " android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+            <TextView android:textSize="12sp" android:textColor="@color/point" android:id="@+id/textPostPoint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8,000원 바로 지급!" android:fontFamily="@font/kopubdotum_pro_bold" android:letterSpacing="-0.02"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+            <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="수익 포인트 최대 " android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+            <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textPostMaximumPoint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="200만원 " android:fontFamily="@font/kopubdotum_pro_bold" android:letterSpacing="-0.02"/>
+            <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="추가 지급" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/textTitleBanner" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginStart="24dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="단 3번의 터치" android:fontFamily="@font/kopubdotum_pro_bold" android:letterSpacing="-0.02"/>
+            <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="로 포스팅 하고" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+        </LinearLayout>
+        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="핏츠 포인트 무제한 받아가세요!" android:fontFamily="@font/kopubdotum_pro_medium"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerPostable" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:paddingStart="20dp" android:paddingEnd="20dp"/>
+    <ImageView android:id="@+id/imageBanner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:scaleType="fitXY" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+    <View android:id="@+id/lineDivider" android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+    <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="일반 상품 포스팅" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="24dp" android:letterSpacing="-0.02"/>
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_marginBottom="24dp">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/buttonClothes" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/icon_post_type_clothes"/>
+            <TextView android:textSize="11sp" android:textColor="@color/purple1" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="옷" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/buttonShoes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="41dp" android:layout_marginEnd="41dp">
+            <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/icon_post_type_shoes"/>
+            <TextView android:textSize="11sp" android:textColor="@color/blue1" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="신발" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/buttonBags" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/icon_post_type_bag"/>
+            <TextView android:textSize="11sp" android:textColor="@color/green1" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="가방" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

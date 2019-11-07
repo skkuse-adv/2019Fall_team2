@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="com_kakao_accounts_array">
+        <item>@string/com_kakao_kakaotalk_account</item>
+        <item>@string/com_kakao_other_kakaoaccount</item>
+        <item>@string/com_kakao_account_cancel</item>
+    </array>
+    <array name="fitts_styles">
+        <item>심플베이직</item>
+        <item>캐쥬얼</item>
+        <item>스트릿</item>
+        <item>러블리</item>
+        <item>페미닌</item>
+        <item>모던시크</item>
+        <item>유니크</item>
+        <item>빈티지</item>
+        <item>유니섹스</item>
+        <item>섹시글램</item>
+        <item>포멀</item>
+        <item>럭셔리</item>
+        <item>에스닉</item>
+        <item>스포티</item>
+    </array>
+</resources>

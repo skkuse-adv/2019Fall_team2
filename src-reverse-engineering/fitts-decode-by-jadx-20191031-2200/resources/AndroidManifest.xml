@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="153" android:versionName="2.11.2" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="kr.co.popone.fitts" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/fitts_ic_launcher" android:name="kr.co.popone.fitts.base.FittsApplication" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="true" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/fitts_ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity android:label="@string/app_name" android:name="kr.co.popone.fitts.feature.main.MainActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="kakao71a04a850aa64e57e7fee5ee07d878f9" android:host="kakaolink"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fitts"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/StatueBarTransparent" android:name="kr.co.popone.fitts.feature.intro.IntroActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.intro.login.LoginActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.tag.TagSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.intro.join.JoinActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/com_facebook_activity_theme" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.comment.CommentsActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.follow.FollowActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.me.like.LikedActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="kr.co.popone.fitts.feature.post.detail.PostActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.setting.SettingActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.alarm.AlarmSettingActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.setting.WithdrawalActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.post.detail.ReportPostActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.me.ModifyProfileActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.me.ModifyBodyActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:name="kr.co.popone.fitts.feature.showroom.ModifyShowRoomActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="kr.co.popone.fitts.feature.showroom.ShowRoomActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="kr.co.popone.fitts.feature.setting.FeedbackActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="kr.co.popone.fitts.feature.WebActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="photopicker.view.ImageSelectorActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="photopicker.view.ImageCropActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="photopicker.view.ImagePreviewActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.post.upload.create.CreatePostActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.post.upload.guide.PostGuideActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.post.upload.crop.PostImageDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.post.upload.preview.PostPreviewActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="kr.co.popone.fitts.feature.search.ShopWebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="핏츠 포인트 사용" android:name="kr.co.popone.fitts.feature.reward.RewardPointUseActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="샵검색" android:name="kr.co.popone.fitts.feature.search.ShopSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="stateVisible"/>
+        <activity android:label="주소찾기" android:name="kr.co.popone.fitts.feature.reward.AddressWebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="핏츠 포인트 사용신청 확인" android:name="kr.co.popone.fitts.feature.reward.RewardPointUseConfirmActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="핏츠 포인트 사용 내역 상세" android:name="kr.co.popone.fitts.feature.reward.RewardUsageDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="비밀번호 찾기" android:name="kr.co.popone.fitts.feature.intro.login.ResetPasswordActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <activity android:label="최초 포스트 작성 가이드" android:name="kr.co.popone.fitts.feature.post.upload.guide.PostFirstWriteGuideActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="후기 삭제 알림 페이지" android:name="kr.co.popone.fitts.feature.post.notification.PostDeleteNotificationDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="후기 기획전" android:name="kr.co.popone.fitts.feature.collection.PostCollectionActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="프로필 정보 입력" android:name="kr.co.popone.fitts.feature.post.ProfileInputActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="첫 후기 심사 안내" android:name="kr.co.popone.fitts.feature.post.PostFirstWriteNoticeActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="첫 후기 심사 승인" android:name="kr.co.popone.fitts.feature.post.PostVerificationFinishNoticeActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="첫 후기 심사 반려" android:name="kr.co.popone.fitts.feature.post.PostVerificationRejectNoticeActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="가입 환영 안내" android:name="kr.co.popone.fitts.feature.home.WelcomeActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="신규회원가입가이드" android:name="kr.co.popone.fitts.feature.intro.UserGuideActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="이벤트용웹" android:name="kr.co.popone.fitts.feature.openweb.OpenWebActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:theme="@style/Theme.AppCompat.Translucent" android:label="사이드가이드" android:name="kr.co.popone.fitts.feature.me.SizeGuideActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="사이즈입력" android:name="kr.co.popone.fitts.feature.post.UserSizeInputActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="프로모션컬렉션" android:name="kr.co.popone.fitts.feature.collection.PromotionCollectionActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="응모이벤트" android:name="kr.co.popone.fitts.feature.event.AppliableEventActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="응모이벤트 응모하기" android:name="kr.co.popone.fitts.feature.event.AppliableEventApplyActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="응모이벤트 결과" android:name="kr.co.popone.fitts.feature.event.AppliableEventResultActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:label="응모이벤트 당첨입력" android:name="kr.co.popone.fitts.feature.event.AppliableEventWinnerInputActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="포스팅 금지 랜딩" android:name="kr.co.popone.fitts.feature.post.PostingViolationNoticeActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="멀티이미지 이벤트" android:name="kr.co.popone.fitts.feature.event.MultiImageEventActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="콜라보 이벤트" android:name="kr.co.popone.fitts.feature.event.AppliableCollaborativeEventActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="콜라보 이벤트 응모" android:name="kr.co.popone.fitts.feature.event.AppliableCollaborativeEventApplyActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="콜라보 이벤트 웹" android:name="kr.co.popone.fitts.feature.event.EventShopWebActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="쿠폰 등록" android:name="kr.co.popone.fitts.feature.coupon.CouponRegisterActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <activity android:label="쿠폰 발급 사용자 정보 입력" android:name="kr.co.popone.fitts.feature.coupon.CouponPointInputUserInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <activity android:label="쿠폰 발급 사용자 정보 입력" android:name="kr.co.popone.fitts.feature.coupon.CouponUseActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="쿠폰 홈" android:name="kr.co.popone.fitts.feature.coupon.CouponHomeActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="쿠폰 사용신청 확인" android:name="kr.co.popone.fitts.feature.coupon.CouponUseConfirmActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="쿠폰 사용 내역 상세" android:name="kr.co.popone.fitts.feature.coupon.CouponUsageDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="약관 동의 웹뷰" android:name="kr.co.popone.fitts.feature.coupon.TermsAgreeWebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="개인별 추천" android:name="kr.co.popone.fitts.feature.recommend.personalization.PersonalizedRecommendActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="회원 추가 정보 수정" android:name="kr.co.popone.fitts.feature.setting.ModifyUserInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="다중 콜렉션" android:name="kr.co.popone.fitts.feature.collection.MixedCollectionActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="실명 인증 관련 화면 관리" android:name="kr.co.popone.fitts.feature.identification.view.IdentificationActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="장바구니 화면" android:name="kr.co.popone.fitts.feature.cart.CartActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="주문하기 화면" android:name="kr.co.popone.fitts.feature.order.OrderActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="카테고리 모아 보기 화면" android:name="kr.co.popone.fitts.feature.category.CategorySearchActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="주문 목록 화면" android:name="kr.co.popone.fitts.feature.order.orderlist.OrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="스토어 인웹 브라우저" android:name="kr.co.popone.fitts.feature.store.browser.StoreBrowserActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="주문 상세 정보 화면" android:name="kr.co.popone.fitts.feature.order.detail.OrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="찜 목록 화면" android:name="kr.co.popone.fitts.feature.wish.WishListActvitity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="검색 화면" android:name="kr.co.popone.fitts.feature.search.view.SearchActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <activity android:label="신규 유저 핏티 추천 화면" android:name="kr.co.popone.fitts.feature.recommend.fittie.FittieRecommendActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="주문 완료 화면" android:name="kr.co.popone.fitts.feature.order.complete.OrderCompleteRenderActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="추천콘텐츠, 이벤트 전체 배너 화면" android:name="kr.co.popone.fitts.feature.banner.BannerActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="교환 완료 화면" android:name="kr.co.popone.fitts.feature.exchange.ExchangeCompleteActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="반품 신청 화면" android:name="kr.co.popone.fitts.feature.refund.RefundApplyActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="상품 교환 화면" android:name="kr.co.popone.fitts.feature.exchange.ExchangeApplyActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="환불 완료 화면" android:name="kr.co.popone.fitts.feature.refund.RefundCompleteActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="주문 관련 푸시 랜딩 화면" android:name="kr.co.popone.fitts.feature.push.order.OrderRendingActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="수익 쉐어 화면" android:name="kr.co.popone.fitts.feature.ncommerce.NCommerceActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="주문 조회 화면" android:name="kr.co.popone.fitts.feature.order.tracking.OrderTrackingActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="팔로잉 사용자의 포스트 목록" android:name="kr.co.popone.fitts.feature.post.follow.FollowingPostActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="사업자 정보" android:name="kr.co.popone.fitts.feature.setting.BusinessInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="Simple WebView" android:name="kr.co.popone.fitts.feature.web.SimpleWebActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="스토어 브릿지 화면" android:name="kr.co.popone.fitts.feature.store.bridge.ShopBridgeActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="비제휴사 스토어 브릿지 화면" android:name="kr.co.popone.fitts.feature.store.bridge.product.ProductBridgeActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="핏츠 카드 렌딩 화면" android:name="kr.co.popone.fitts.feature.card.FittsCardRendingActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="결제 모듈 웹뷰 화면" android:name="kr.co.popone.fitts.feature.payment.PaymentModuleActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="트렌드 상세 화면" android:name="kr.co.popone.fitts.feature.trend.TrendFeedActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <activity android:label="샵 즐겨찾기 목록 화면" android:name="kr.co.popone.fitts.feature.store.bookmark.ShopBookmarkActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize"/>
+        <service android:name="kr.co.popone.fitts.services.FittsFirebaseMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="design_width" android:value="1080"/>
+        <meta-data android:name="design_height" android:value="1920"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="@string/kakao_app_id"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="8e4dfee16a3bc2aeb338150fca4f08b2cf41f82b"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/android_notification_icon"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/notification_icon"/>
+        <activity android:theme="@style/Theme.Transparent.Permission" android:name="com.gun0912.tedpermission.TedPermissionActivity" android:screenOrientation="unspecified" android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|layoutDirection|fontScale"/>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity"/>
+        <provider android:name="com.google.firebase.perf.provider.FirebasePerfProvider" android:exported="false" android:authorities="kr.co.popone.fitts.firebaseperfprovider" android:initOrder="101"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:label="@string/com_kakao_login_button" android:name="com.kakao.auth.authorization.authcode.KakaoWebViewActivity" android:exported="false" android:launchMode="singleTop" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustResize"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="kr.co.popone.fitts.firebaseinitprovider" android:initOrder="100"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:name="com.facebook.marketing.internal.MarketingInitProvider" android:exported="false" android:authorities="kr.co.popone.fitts.MarketingInitProvider"/>
+        <provider android:name="com.facebook.internal.FacebookInitProvider" android:exported="false" android:authorities="kr.co.popone.fitts.FacebookInitProvider"/>
+        <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.crashlytics.android.CrashlyticsInitProvider" android:exported="false" android:authorities="kr.co.popone.fitts.crashlyticsinitprovider" android:initOrder="90"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="kr.co.popone.fitts.lifecycle-process"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

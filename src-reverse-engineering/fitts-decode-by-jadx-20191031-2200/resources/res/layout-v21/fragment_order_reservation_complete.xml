@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/buttonContainer" android:paddingBottom="24dp" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+        <Button android:textSize="14sp" android:textColor="@color/point" android:id="@+id/buttonOrderDetail" android:background="@drawable/button_reward_use" android:layout_width="0dp" android:layout_height="53dp" android:layout_marginTop="13dp" android:text="주문 상세내역" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="25dp" android:layout_marginEnd="25dp" android:letterSpacing="-0.02" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="?android:attr/borderlessButtonStyle"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/buttonContainer" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/toolbarLayout" android:layout_width="match_parent" android:layout_height="48dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                <FrameLayout android:id="@+id/backButton" android:layout_width="wrap_content" android:layout_height="0dp" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="16.5dp" android:layout_height="16.5dp" android:src="@drawable/button_cancel"/>
+                </FrameLayout>
+                <View android:background="@color/gray0" android:layout_width="0dp" android:layout_height="0.5dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="39.5dp" android:layout_marginStart="24dp">
+                <TextView android:textSize="12sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="주문번호" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+                <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textOrderNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_regular" android:layout_marginStart="10dp" android:letterSpacing="-0.02"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageOrderState" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="34dp"/>
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/endDateLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginStart="24dp">
+                <TextView android:textSize="16sp" android:textColor="#434344" android:id="@+id/textDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_bold" android:letterSpacing="-0.02"/>
+                <TextView android:textSize="16sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="까지 입금해주세요." android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="@color/neon_red" android:id="@+id/textEndDateWarning" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.5dp" android:text="상품이 품절될 수 있으니 입금을 서둘러 주세요!" android:layout_marginStart="24dp" android:letterSpacing="-0.02"/>
+            <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="34dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+            <TableLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginStart="24dp">
+                <TableRow>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="입금자명" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/textRemittorName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="15dp" android:letterSpacing="-0.02"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="10dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="입금은행" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/textBankName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="15dp" android:letterSpacing="-0.02"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="10dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="입금금액" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/textPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="15dp" android:letterSpacing="-0.02"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="10dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="예금주명" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/textAccountHolder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="15dp" android:letterSpacing="-0.02"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="10dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="입금계좌" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/textAccountNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="15dp" android:letterSpacing="-0.02"/>
+                </TableRow>
+            </TableLayout>
+            <TextView android:textSize="12sp" android:textColor="@color/gray6" android:gravity="center" android:id="@+id/textCopyAccount" android:background="@drawable/button_enable_edge_gray" android:layout_width="wrap_content" android:layout_height="27dp" android:layout_marginTop="14dp" android:maxWidth="120dp" android:text="계좌번호 복사" android:paddingStart="23dp" android:paddingEnd="23dp" android:layout_marginStart="87dp" android:letterSpacing="-0.02"/>
+            <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+            <TextView android:textSize="12sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="72시간내 미입금 또는 상품 품절 시 주문 자동취소" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="24dp" android:letterSpacing="-0.02"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

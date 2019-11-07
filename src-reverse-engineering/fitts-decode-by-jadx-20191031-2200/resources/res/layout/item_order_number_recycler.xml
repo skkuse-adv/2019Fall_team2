@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include android:id="@+id/viewOrderNumber" layout="@layout/view_order_number"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerView" android:layout_width="0dp" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/viewOrderNumber"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

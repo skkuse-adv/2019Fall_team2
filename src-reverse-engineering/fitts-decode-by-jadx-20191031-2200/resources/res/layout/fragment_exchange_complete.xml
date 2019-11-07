@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/toolbarLayout" android:layout_width="0dp" android:layout_height="48dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <FrameLayout android:id="@+id/backButton" android:layout_width="wrap_content" android:layout_height="0dp" android:paddingStart="22dp" android:paddingEnd="22dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:layout_gravity="center" android:id="@+id/backButtonImageView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_back" android:scaleType="fitXY" android:tint="@color/gray6"/>
+        </FrameLayout>
+        <TextView android:textSize="17sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/titleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환 상세정보" android:layout_marginStart="10dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toEndOf="@+id/backButton" app:layout_constraintTop_toTopOf="0" app:layout_constraintVertical_bias="0.5"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="0dp" android:layout_height="0dp" android:fillViewport="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textExchangeDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:fontFamily="@font/montserrat_regular"/>
+                <TextView android:textSize="22sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="교환 접수가 완료되어\10신청하신 상품이\10배송될 예정입니다." android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="14dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="교환 정보" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp">
+                    <TableRow>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="상품" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:ellipsize="end" android:id="@+id/textProductSummary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200dp" android:maxLines="1" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="9dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="#434344" android:id="@+id/textProductOptionSummary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="21dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환 희망 옵션" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="14dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textExchangeProductOption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="21dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="신청 사유" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textExchangeReason" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/gray1" android:paddingTop="22dp" android:paddingBottom="22dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="34dp" android:layout_weight="1" android:paddingStart="24dp" android:paddingEnd="24dp">
+                <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환 배송 안내" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <TableRow>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- "/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="현재 교환 상품의 송장번호 추적 서비스는 제공되고 있지 않습니다."/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="3dp">
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- "/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환완료 상태 변경일을 기준으로 7일 이내 미수령 시,\10핏츠 플러스친구로 문의주세요."/>
+                    </TableRow>
+                </TableLayout>
+                <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="교환완료 상품의 구매확정 " android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <TableRow>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- "/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환완료 상태변경일을 기준으로 15일 후에 자동 구매확정 됩니다."/>
+                    </TableRow>
+                </TableLayout>
+                <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="교환완료 상품의 재교환 및 반품신청" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <TableRow>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- "/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="교환완료로 상태 변경된 상품의 재교환 또는 반품신청은 불가능합니다."/>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

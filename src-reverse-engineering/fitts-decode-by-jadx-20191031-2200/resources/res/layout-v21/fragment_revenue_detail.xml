@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="24dp" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="42dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <kr.co.popone.fitts.ui.custom.circlepercentage.CirclePercentageView android:id="@+id/circlePercentView" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <View android:background="@color/gray1" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/detailTextLayout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="11dp">
+                    <TextView android:textSize="11sp" android:textColor="@color/gray5" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="이번 달 총 포인트" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+                    <TextView android:textSize="24sp" android:textColor="@color/gray6" android:id="@+id/textTotalIncome" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:fontFamily="@font/montserrat_bold" android:letterSpacing="-0.02"/>
+                    <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp">
+                        <TableRow android:gravity="center_vertical">
+                            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/img_icon_fittspoint" android:tint="@color/point" android:layout_marginEnd="6dp"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="기본" android:includeFontPadding="false" android:fontFamily="@font/kopubdotum_pro_bold" android:letterSpacing="-0.02"/>
+                            <Space android:layout_weight="1"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/gray6" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/textFittsPoint" android:layout_width="match_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="@font/montserrat_regular" android:layout_marginEnd="8dp" android:letterSpacing="-0.02"/>
+                        </TableRow>
+                        <TableRow android:gravity="center_vertical" android:layout_marginTop="11dp">
+                            <ImageView android:layout_width="15dp" android:layout_height="18dp" android:src="@drawable/img_icon_share" android:tint="#60d6ef" android:layout_marginEnd="6dp"/>
+                            <TextView android:textSize="12sp" android:textColor="#60d6ef" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="수익" android:includeFontPadding="false" android:fontFamily="@font/kopubdotum_pro_bold" android:letterSpacing="-0.02"/>
+                            <Space android:layout_weight="1"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/gray6" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/textSharedPoint" android:layout_width="match_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="@font/montserrat_regular" android:layout_marginEnd="8dp" android:letterSpacing="-0.02"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="42dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+            <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="15dp" android:text="수익률 높은 TOP3 포스트" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="24dp" android:letterSpacing="-0.02"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerViewTopThree" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            <include android:id="@+id/layoutLastRevenue" layout="@layout/view_ncommerce_last_revenue"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerProducts" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/layoutAppbar" android:background="@android:color/transparent" android:focusable="false" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:tag="transparent" android:focusable="false" android:clickable="false" android:layout_width="match_parent" android:layout_height="48dp" app:contentInsetStart="0dp">
+            <androidx.constraintlayout.widget.ConstraintLayout android:focusable="false" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageButton android:id="@+id/buttonBack" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/button_black_back" android:tint="@android:color/white" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ProgressBar android:id="@+id/progressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="?android:attr/progressBarStyle"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

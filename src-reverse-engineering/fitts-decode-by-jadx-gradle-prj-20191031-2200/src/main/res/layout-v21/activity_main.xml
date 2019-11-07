@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.drawerlayout.widget.DrawerLayout android:id="@+id/drawerMenu" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <kr.co.popone.fitts.feature.main.MainTabBar android:id="@+id/mainTabBar" android:layout_width="0dp" android:layout_height="48dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+            <kr.co.popone.fitts.feature.main.SwipeViewPager android:id="@+id/viewpager_main" android:layout_width="0dp" android:layout_height="0dp" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintBottom_toTopOf="@+id/mainTabBar" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/guideLineBubble" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.28"/>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/viewStoreToolTip" android:background="@drawable/img_talk_bubble_black_center" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6dp" app:layout_constraintBottom_toTopOf="@+id/mainTabBar" app:layout_constraintEnd_toEndOf="@+id/guideLineBubble" app:layout_constraintStart_toStartOf="@+id/guideLineBubble">
+                <TextView android:textSize="13sp" android:textColor="#ffffff" android:id="@+id/tvStoreToolTipFirst" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="매일 새로운" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.03"/>
+                <TextView android:textSize="13sp" android:textColor="@color/point" android:gravity="center_horizontal" android:id="@+id/tvStoreToolTipSecond" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:fontFamily="@font/kopubdotum_pro_bold" android:letterSpacing="-0.03"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <include android:layout_gravity="start" android:id="@+id/menuContainer" android:layout_width="305dp" android:layout_height="match_parent" layout="@layout/menu_drawer"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

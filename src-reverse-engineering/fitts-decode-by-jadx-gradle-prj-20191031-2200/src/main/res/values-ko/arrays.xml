@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="com_kakao_accounts_array">
+        <item>@string/com_kakao_kakaotalk_account</item>
+        <item>@string/com_kakao_other_kakaoaccount</item>
+        <item>@string/com_kakao_account_cancel</item>
+    </array>
+</resources>

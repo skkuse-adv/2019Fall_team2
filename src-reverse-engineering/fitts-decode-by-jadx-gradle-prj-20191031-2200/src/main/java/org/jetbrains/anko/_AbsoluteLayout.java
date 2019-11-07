@@ -1,0 +1,124 @@
+package org.jetbrains.anko;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AbsoluteLayout;
+import android.widget.AbsoluteLayout.LayoutParams;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+public class _AbsoluteLayout extends AbsoluteLayout {
+    public _AbsoluteLayout(@NotNull Context context) {
+        Intrinsics.checkParameterIsNotNull(context, "ctx");
+        super(context);
+    }
+
+    @NotNull
+    public static /* synthetic */ View lparams$default(_AbsoluteLayout _absolutelayout, View view, int i, int i2, int i3, int i4, Function1 function1, int i5, Object obj) {
+        if (obj == null) {
+            if ((i5 & 1) != 0) {
+                i = -2;
+            }
+            if ((i5 & 2) != 0) {
+                i2 = -2;
+            }
+            Intrinsics.checkParameterIsNotNull(view, "receiver$0");
+            Intrinsics.checkParameterIsNotNull(function1, "init");
+            LayoutParams layoutParams = new LayoutParams(i, i2, i3, i4);
+            function1.invoke(layoutParams);
+            view.setLayoutParams(layoutParams);
+            return view;
+        }
+        throw new UnsupportedOperationException("Super calls with default arguments not supported in this target, function: lparams");
+    }
+
+    @NotNull
+    public final <T extends View> T lparams(@NotNull T t, int i, int i2, int i3, int i4, @NotNull Function1<? super LayoutParams, Unit> function1) {
+        Intrinsics.checkParameterIsNotNull(t, "receiver$0");
+        Intrinsics.checkParameterIsNotNull(function1, "init");
+        LayoutParams layoutParams = new LayoutParams(i, i2, i3, i4);
+        function1.invoke(layoutParams);
+        t.setLayoutParams(layoutParams);
+        return t;
+    }
+
+    @NotNull
+    public static /* synthetic */ View lparams$default(_AbsoluteLayout _absolutelayout, View view, int i, int i2, int i3, int i4, int i5, Object obj) {
+        if (obj == null) {
+            if ((i5 & 1) != 0) {
+                i = -2;
+            }
+            if ((i5 & 2) != 0) {
+                i2 = -2;
+            }
+            Intrinsics.checkParameterIsNotNull(view, "receiver$0");
+            view.setLayoutParams(new LayoutParams(i, i2, i3, i4));
+            return view;
+        }
+        throw new UnsupportedOperationException("Super calls with default arguments not supported in this target, function: lparams");
+    }
+
+    @NotNull
+    public final <T extends View> T lparams(@NotNull T t, int i, int i2, int i3, int i4) {
+        Intrinsics.checkParameterIsNotNull(t, "receiver$0");
+        t.setLayoutParams(new LayoutParams(i, i2, i3, i4));
+        return t;
+    }
+
+    @NotNull
+    public final <T extends View> T lparams(@NotNull T t, @Nullable Context context, @Nullable AttributeSet attributeSet, @NotNull Function1<? super LayoutParams, Unit> function1) {
+        Intrinsics.checkParameterIsNotNull(t, "receiver$0");
+        Intrinsics.checkParameterIsNotNull(function1, "init");
+        if (context == null) {
+            Intrinsics.throwNpe();
+        }
+        if (attributeSet == null) {
+            Intrinsics.throwNpe();
+        }
+        LayoutParams layoutParams = new LayoutParams(context, attributeSet);
+        function1.invoke(layoutParams);
+        t.setLayoutParams(layoutParams);
+        return t;
+    }
+
+    @NotNull
+    public final <T extends View> T lparams(@NotNull T t, @Nullable Context context, @Nullable AttributeSet attributeSet) {
+        Intrinsics.checkParameterIsNotNull(t, "receiver$0");
+        if (context == null) {
+            Intrinsics.throwNpe();
+        }
+        if (attributeSet == null) {
+            Intrinsics.throwNpe();
+        }
+        t.setLayoutParams(new LayoutParams(context, attributeSet));
+        return t;
+    }
+
+    @NotNull
+    public final <T extends View> T lparams(@NotNull T t, @Nullable ViewGroup.LayoutParams layoutParams, @NotNull Function1<? super LayoutParams, Unit> function1) {
+        Intrinsics.checkParameterIsNotNull(t, "receiver$0");
+        Intrinsics.checkParameterIsNotNull(function1, "init");
+        if (layoutParams == null) {
+            Intrinsics.throwNpe();
+        }
+        LayoutParams layoutParams2 = new LayoutParams(layoutParams);
+        function1.invoke(layoutParams2);
+        t.setLayoutParams(layoutParams2);
+        return t;
+    }
+
+    @NotNull
+    public final <T extends View> T lparams(@NotNull T t, @Nullable ViewGroup.LayoutParams layoutParams) {
+        Intrinsics.checkParameterIsNotNull(t, "receiver$0");
+        if (layoutParams == null) {
+            Intrinsics.throwNpe();
+        }
+        t.setLayoutParams(new LayoutParams(layoutParams));
+        return t;
+    }
+}

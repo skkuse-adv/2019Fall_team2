@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp">
+            <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="48dp" app:contentInsetStart="0dp" app:layout_scrollFlags="5" app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                    <FrameLayout android:id="@+id/iconMenu" android:layout_width="wrap_content" android:layout_height="48dp" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                        <ImageView android:layout_gravity="center" android:layout_width="22dp" android:layout_height="16dp" android:src="@drawable/img_icon_category"/>
+                    </FrameLayout>
+                    <ImageView android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/home_title" android:layout_centerInParent="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <FrameLayout android:id="@+id/iconCart" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginEnd="13dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0">
+                        <ImageView android:layout_gravity="center" android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/img_icon_sb" android:layout_marginStart="11dp" android:layout_marginEnd="11dp"/>
+                        <TextView android:textSize="10.5sp" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/recommendationNewBadge" android:background="@drawable/bg_recommend_new_badge" android:visibility="gone" android:layout_width="16dp" android:layout_height="16dp" android:layout_marginTop="8dp" android:layout_marginEnd="3dp"/>
+                    </FrameLayout>
+                    <FrameLayout android:id="@+id/iconSearch" android:layout_width="wrap_content" android:layout_height="48dp" android:paddingStart="11dp" android:paddingEnd="11dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/iconCart" app:layout_constraintTop_toTopOf="0">
+                        <ImageView android:layout_gravity="center" android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/img_icon_search"/>
+                    </FrameLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <kr.co.popone.fitts.ui.custom.CustomTabLayout android:id="@+id/type_tab" android:background="@drawable/app_bar" android:layout_width="match_parent" android:layout_height="36dp" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:tabGravity="0" app:tabIndicatorColor="@color/gray6" app:tabIndicatorHeight="1dp" app:tabPaddingEnd="0dp" app:tabPaddingStart="0dp"/>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.viewpager.widget.ViewPager android:id="@+id/homeFeedViewPager" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

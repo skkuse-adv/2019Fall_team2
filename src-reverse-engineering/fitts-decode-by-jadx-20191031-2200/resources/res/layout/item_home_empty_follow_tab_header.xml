@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="52dp">
+            <ImageView android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.1"/>
+            <RelativeLayout android:paddingLeft="@dimen/margin_horizontal" android:paddingTop="10dp" android:paddingRight="@dimen/margin_horizontal" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="13sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/noitem_title" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/noitem_follow" android:paddingStart="24dp" android:paddingEnd="24dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="43dp" android:layout_marginBottom="12.3dp" android:text="@string/noitem_follow_recomm" android:paddingStart="24dp" android:paddingEnd="24dp"/>
+        <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+    </LinearLayout>
+</RelativeLayout>

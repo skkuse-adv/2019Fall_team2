@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/swipeRefreshLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@+id/usedRewardHistoryRecyclerView" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/recyclerEmptyLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:id="@+id/emptyItemTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="모든 쇼핑몰에서 포인트를" android:fontFamily="@font/kopubdotum_pro_medium" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="@+id/emptyItemTextView" app:layout_constraintStart_toStartOf="@+id/emptyItemTextView" app:layout_constraintTop_toBottomOf="@+id/emptyItemTextView">
+                    <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="현금처럼 사용해보세요" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    <ImageView android:layout_width="20dp" android:layout_height="25dp" android:src="@drawable/ic_dollor" android:layout_marginStart="3dp"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

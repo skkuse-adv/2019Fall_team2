@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/toolbarLayout" android:layout_width="0dp" android:layout_height="48dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <FrameLayout android:id="@+id/backButton" android:layout_width="wrap_content" android:layout_height="0dp" android:paddingStart="22dp" android:paddingEnd="22dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:layout_gravity="center" android:id="@+id/backButtonImageView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_back" android:scaleType="fitXY" android:tint="@color/gray6"/>
+        </FrameLayout>
+        <TextView android:textSize="17sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/titleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="반품 상세정보" android:layout_marginStart="10dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toEndOf="@+id/backButton" app:layout_constraintTop_toTopOf="0" app:layout_constraintVertical_bias="0.5"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="24dp" android:paddingEnd="24dp">
+                <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textRefundDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:fontFamily="@font/montserrat_regular"/>
+                <TextView android:textSize="22sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="반품 신청이 완료되었습니다" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="14dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="반품 안내" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:id="@+id/layoutUserFault" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+                    <TableRow>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="배송비" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="판매자마다 계약된 택배사가 상이합니다.\10판매자의 정책을 확인해주세요." android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="20dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="결제방법" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="43dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="상품에 직접 동봉 또는\10판매처의 배송비 입금계좌로 계좌이체" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="10dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="43dp"/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="반품 배송비 미결제 시 추가 입금 요청이\10발생할 수 있습니다." android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="20dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="반품방법" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/refund_method_desc" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="10dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/refund_method_sub_desc1" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                </TableLayout>
+                <TableLayout android:id="@+id/layoutSellerFault" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+                    <TableRow>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="반품방법" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="43dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/refund_method_desc" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="10dp">
+                        <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/refund_method_sub_desc1" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="10dp">
+                        <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/refund_method_sub_desc2" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                </TableLayout>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="34dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="판매자 정보" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+                    <TableRow>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="판매자" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="54dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textSellerName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="20dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="주소" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textSellerAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                </TableLayout>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="34dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="반품 정보" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+                    <TableRow>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="상품" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textProductSummary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="#434344" android:id="@+id/textProductOptionSummary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="20dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="반품 사유" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="40dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textExchangeReason" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                </TableLayout>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="34dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:id="@+id/textRefundCreditCard" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="환불 방법" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TextView android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/textRefundCreditDesc" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="구매 시 결제하신 수단으로 자동 환불될 예정입니다." android:fontFamily="@font/kopubdotum_pro_medium"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:id="@+id/textRefundDeposit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="환불 받을 계좌" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <TableLayout android:id="@+id/tableBankInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+                    <TableRow>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="은행" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textBankName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                    <TableRow android:layout_marginTop="20dp">
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="계좌번호" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="43dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textBankAccount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </TableRow>
+                </TableLayout>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="34dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="환불 예정금액" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+                    <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="환불 예정 금액" android:fontFamily="@font/kopubdotum_pro_medium" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <TextView android:textSize="11sp" android:textColor="@color/gray4" android:gravity="end" android:id="@+id/textRefundValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:includeFontPadding="false" android:fontFamily="@font/montserrat_regular" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp">
+                    <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="환불 예정 핏츠 포인트" android:fontFamily="@font/kopubdotum_pro_medium" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <TextView android:textSize="11sp" android:textColor="@color/gray4" android:gravity="end" android:id="@+id/textPointAdjust" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:includeFontPadding="false" android:fontFamily="@font/montserrat_regular" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp">
+                    <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="환불 예정 핏츠 쿠폰" android:fontFamily="@font/kopubdotum_pro_medium" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <TextView android:textSize="11sp" android:textColor="@color/gray4" android:gravity="end" android:id="@+id/textCouponAdjust" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:includeFontPadding="false" android:fontFamily="@font/montserrat_regular" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="14dp"/>
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp">
+                    <TextView android:textSize="16sp" android:textColor="#000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="최종 환불 예정금액" android:fontFamily="@font/kopubdotum_pro_bold" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0">
+                        <TextView android:textSize="18sp" android:textColor="#000000" android:gravity="end" android:id="@+id/textFinalRefundValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_bold" android:layout_marginEnd="1dp"/>
+                        <TextView android:textSize="16sp" android:textColor="#000000" android:gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="원" android:fontFamily="@font/kopubdotum_pro_bold"/>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView android:textSize="14sp" android:textColor="@color/gray7" android:gravity="center" android:id="@+id/buttonChangeMind" android:background="@drawable/background_round_white_gray7" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="32dp" android:layout_marginBottom="24dp" android:text="신청취소" android:layout_weight="1" android:fontFamily="@font/kopubdotum_pro_medium"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/gray1" android:padding="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="반품 과정 (상품 수거 및 확인) 에서\10발생되는 문제는 핏츠측에서 관여하지 않습니다." android:fontFamily="@font/kopubdotum_pro_medium"/>
+                <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="쿠폰의 경우 일회석 이벤트로 지급되므로 환급은 불가능합니다." android:fontFamily="@font/kopubdotum_pro_medium"/>
+                <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="단, 판매처의 귀책사유로 인하여 환불처리가 진행되는 경우에는\10환불이 완료되면 자동으로 지급됩니다." android:fontFamily="@font/kopubdotum_pro_medium"/>
+                <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="환불된 쿠폰의 사용기간은 사용한 시점에 남아있던 기간만큼\10제공됩니다." android:fontFamily="@font/kopubdotum_pro_medium"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

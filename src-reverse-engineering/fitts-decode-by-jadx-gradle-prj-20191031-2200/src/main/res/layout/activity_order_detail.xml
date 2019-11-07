@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolBar" android:layout_width="0dp" android:layout_height="48dp" app:contentInsetStart="0dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <androidx.percentlayout.widget.PercentRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageButton android:id="@+id/closeButton" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/button_back" android:tint="#000000" android:paddingStart="24dp" android:paddingEnd="24dp" android:layout_alignParentStart="true"/>
+            <TextView android:textSize="17sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="주문상세" android:layout_centerVertical="true" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="14dp" android:layout_toEndOf="@+id/closeButton"/>
+        </androidx.percentlayout.widget.PercentRelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/toolBar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include layout="@layout/view_ordernumber_total_product"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerView" android:layout_width="match_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            <include layout="@layout/view_amount_payment_order_detail"/>
+            <include layout="@layout/view_how_pay_order_detail"/>
+            <include layout="@layout/view_predict_point"/>
+            <include layout="@layout/view_buyer_info_order_detail"/>
+            <include layout="@layout/view_shipping_info_order_detail"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

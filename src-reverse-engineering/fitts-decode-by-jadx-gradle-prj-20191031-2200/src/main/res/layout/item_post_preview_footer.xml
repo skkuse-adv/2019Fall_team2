@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+    <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/postProductAboutTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="31dp" android:layout_marginBottom="15dp" android:text="@string/post_product_about"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="15dp" android:src="@drawable/quotes_img"/>
+        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/about_product" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="7dp"/>
+    </LinearLayout>
+    <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="31dp"/>
+    <me.gujun.android.taggroup.TagGroup android:id="@+id/post_tag" android:layout_marginTop="24dp" android:layout_marginBottom="40dp" app:atg_borderColor="@color/gray3" app:atg_horizontalPadding="10dp" app:atg_horizontalSpacing="5dp" app:atg_textColor="#000000" app:atg_textSize="13sp" app:atg_verticalPadding="6dp" style="@style/TagGroup.Large"/>
+</LinearLayout>

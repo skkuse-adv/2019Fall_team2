@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="11sp" android:textColor="#434344" android:gravity="center_horizontal" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="* 배송비 부담" android:layout_weight="1" android:layout_marginEnd="5dp"/>
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" android:layout_marginStart="5dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:gravity="center" android:id="@+id/buttonChangeMind" android:background="@drawable/background_round_white_gray4" android:layout_width="0dp" android:layout_height="31dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="고객 변심" android:layout_weight="1" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="10dp"/>
+        <View android:background="@color/gray1" android:layout_width="1dp" android:layout_height="match_parent"/>
+        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:gravity="center" android:id="@+id/buttonProductProblem" android:background="@drawable/background_round_white_gray4" android:layout_width="0dp" android:layout_height="31dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="상품 하자" android:layout_weight="1" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="10dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:gravity="center" android:id="@+id/buttonUserMistake" android:background="@drawable/background_round_white_gray4" android:layout_width="0dp" android:layout_height="31dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="주문 실수" android:layout_weight="1" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="10dp"/>
+        <View android:background="@color/gray1" android:layout_width="1dp" android:layout_height="match_parent"/>
+        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:gravity="center" android:id="@+id/buttonDelay" android:background="@drawable/background_round_white_gray4" android:layout_width="0dp" android:layout_height="31dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="오배송 및 지연" android:layout_weight="1" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="10dp"/>
+    </LinearLayout>
+</LinearLayout>

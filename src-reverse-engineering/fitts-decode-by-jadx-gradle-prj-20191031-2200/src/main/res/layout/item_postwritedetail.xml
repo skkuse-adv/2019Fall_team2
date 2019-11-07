@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/post_image" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="fitXY" android:adjustViewBounds="true"/>
+        <ImageButton android:id="@+id/post_image_remove_button" android:background="@android:color/transparent" android:padding="@dimen/activity_vertical_margin_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_image_remove" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"/>
+        <ImageButton android:id="@+id/post_image_crop_button" android:background="@android:color/transparent" android:padding="@dimen/activity_vertical_margin_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_image_crop" android:layout_alignParentBottom="true" android:alpha="0.5" android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+    <EditText android:textSize="16sp" android:textColor="@color/gray6" android:textColorHint="@color/gray4" android:id="@+id/post_image_description" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/activity_margin" android:hint="@string/create_post_crop_hint"/>
+</LinearLayout>

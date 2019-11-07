@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/layoutContainer" android:background="@drawable/background_round_gray0_gray1" android:layout_width="match_parent" android:layout_height="34dp" android:paddingStart="15dp" android:paddingEnd="15dp">
+    <TextView android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/textRanking" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2위" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginEnd="12dp" android:letterSpacing="-0.02"/>
+    <TextView android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/textProductName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="와이드팬츠" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+    <View android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <ImageView android:id="@+id/iconMore" android:layout_width="7dp" android:layout_height="11dp" android:src="@drawable/button_nav_next" android:tint="@color/gray5"/>
+</LinearLayout>
