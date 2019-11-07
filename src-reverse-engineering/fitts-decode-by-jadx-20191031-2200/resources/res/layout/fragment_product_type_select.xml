@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="12sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="갖고 싶은 상품의 종류를 선택하세요" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+    <View android:background="@color/gray4" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="12dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+    <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@+id/recyclerView" android:layout_width="match_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+</LinearLayout>

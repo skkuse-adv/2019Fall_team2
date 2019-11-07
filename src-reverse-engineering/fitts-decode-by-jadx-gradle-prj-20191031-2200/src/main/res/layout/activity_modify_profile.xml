@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:background="@drawable/app_bar" android:layout_width="match_parent" android:layout_height="48dp" app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="48dp" app:contentInsetStart="0dp">
+            <androidx.percentlayout.widget.PercentRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageButton android:id="@+id/back" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/button_back" android:tint="@color/gray6" android:layout_centerVertical="true" android:paddingStart="24dp" android:paddingEnd="24dp"/>
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/modify_profile_title" android:layout_centerVertical="true" android:layout_marginStart="14dp" android:layout_toEndOf="@+id/back"/>
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:padding="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="32sp" android:textStyle="normal|bold|italic" android:textColor="#000000" android:id="@+id/profile_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerVertical="true" android:fontFamily="@font/proxima_nova_bold_italic"/>
+            <RelativeLayout android:layout_width="93dp" android:layout_height="93dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profile_image" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <View android:background="@drawable/background_profile_fat" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <ImageButton android:id="@+id/modify_profile_image_button" android:background="@android:color/transparent" android:padding="11dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_insert_pic" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="24dp" android:layout_marginBottom="20dp"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14sp" android:textColor="#000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/modify_profile_email" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+            <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/gray3" android:id="@+id/profile_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp"/>
+        <RelativeLayout android:id="@+id/modify_body_button" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14sp" android:textColor="#000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/modify_profile_body" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+            <ImageView android:id="@+id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:tint="@color/gray5" android:layout_centerVertical="true" android:layout_marginStart="10dp" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/modify_profile_button" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14sp" android:textColor="#000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/modify_profile_showroom" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:tint="@color/gray5" android:layout_centerVertical="true" android:layout_marginStart="10dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/modify_profile_user_info" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14sp" android:textColor="#000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="회원정보 수정" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:tint="@color/gray5" android:layout_centerVertical="true" android:layout_marginStart="10dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/gray1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

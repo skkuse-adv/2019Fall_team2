@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/buttonContainer" android:paddingBottom="24dp" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+        <Button android:textSize="14sp" android:textColor="@color/point" android:id="@+id/buttonOrderDetail" android:background="@drawable/button_reward_use" android:layout_width="0dp" android:layout_height="53dp" android:layout_marginTop="13dp" android:text="주문 상세내역" android:layout_weight="1" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="25dp" android:layout_marginEnd="2dp" android:letterSpacing="-0.02" style="?android:attr/borderlessButtonStyle"/>
+        <Button android:textSize="14sp" android:textColor="@android:color/white" android:id="@+id/buttonGoShopping" android:background="@drawable/button_rounded_event_apply" android:layout_width="0dp" android:layout_height="53dp" android:layout_marginTop="13dp" android:text="쇼핑 계속하기" android:layout_weight="1" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="2dp" android:layout_marginEnd="25dp" android:letterSpacing="-0.02" style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/buttonContainer" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="90dp" android:layout_marginStart="24dp">
+                <TextView android:textSize="12sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="주문번호" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+                <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textOrderNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_regular" android:layout_marginStart="10dp" android:letterSpacing="-0.02"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageOrderState" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="34dp"/>
+            <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+            <TableLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginStart="24dp">
+                <TableRow>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="배송지정보" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/textShippingName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="12dp" android:letterSpacing="-0.02"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="7dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/textShippingContact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="12dp" android:letterSpacing="-0.02"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="7dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/textAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="186dp" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="12dp" android:letterSpacing="-0.02"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="10dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="배송메모" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/textShippingMemo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="186dp" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="12dp" android:letterSpacing="-0.02"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="10dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="결제금액" android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/textPaidPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="12dp" android:letterSpacing="-0.02"/>
+                </TableRow>
+            </TableLayout>
+            <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="24dp" layout="@layout/view_expected_receivable_point"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

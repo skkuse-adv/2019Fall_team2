@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/transparent27_gray2" android:layout_width="match_parent" android:layout_height="64dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <TextView android:textSize="15sp" android:textColor="@color/gray6" android:id="@+id/textOrderDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2018.10.10" android:fontFamily="@font/montserrat_regular"/>
+        <TextView android:textSize="11sp" android:textColor="@color/gray5" android:id="@+id/textOrderNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ORD20181010-0009077" android:fontFamily="@font/montserrat_regular"/>
+    </LinearLayout>
+    <ImageButton android:id="@+id/iconMore" android:background="@android:color/transparent" android:paddingTop="26dp" android:paddingBottom="26dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <View android:background="@color/gray2" android:layout_width="1dp" android:layout_height="44dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/iconMore" app:layout_constraintTop_toTopOf="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

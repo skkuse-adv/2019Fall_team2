@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBar" android:background="@drawable/app_bar" android:layout_width="0dp" android:layout_height="48dp" app:elevation="0dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="48dp" app:contentInsetStart="0dp">
+            <androidx.percentlayout.widget.PercentRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageButton android:id="@+id/closeButton" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_back" android:tint="@color/gray6" android:layout_centerVertical="true" android:paddingStart="24dp" android:paddingEnd="24dp"/>
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/barTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="14dp" android:layout_toEndOf="@+id/closeButton"/>
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/followListRecyclerView" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/appBar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

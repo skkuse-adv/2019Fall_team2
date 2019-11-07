@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:background="@drawable/app_bar" android:layout_width="match_parent" android:layout_height="48dp" app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="48dp" app:contentInsetStart="0dp">
+            <androidx.percentlayout.widget.PercentRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageButton android:id="@+id/back_text" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/button_cancel" android:layout_centerVertical="true" android:paddingStart="24dp" android:paddingEnd="24dp"/>
+                <RelativeLayout android:orientation="horizontal" android:id="@+id/folder_layout" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerVertical="true" android:layout_marginStart="10dp" android:layout_toEndOf="@+id/back_text">
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/folder_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="모든 이미지" android:drawablePadding="5dp" android:layout_centerInParent="true" android:drawableEnd="@drawable/button_down_anim"/>
+                </RelativeLayout>
+                <TextView android:textSize="17sp" android:textColor="@color/point" android:gravity="center" android:id="@+id/done_text" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="완료" android:paddingStart="24dp" android:paddingEnd="24dp" android:layout_alignParentEnd="true"/>
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/folder_list" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/app_bar"/>
+</RelativeLayout>

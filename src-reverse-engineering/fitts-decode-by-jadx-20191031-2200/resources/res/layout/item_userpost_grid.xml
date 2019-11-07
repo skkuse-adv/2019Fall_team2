@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.2dp">
+    <kr.co.popone.fitts.ui.custom.RoundImageView android:id="@+id/post_cover_image" android:scaleType="centerCrop" android:adjustViewBounds="true" app:layout_aspectRatio="100%" app:layout_widthPercent="100%" app:round_radius="5dp"/>
+    <ImageView android:id="@+id/inactive_post_grid" android:visibility="gone" android:src="@drawable/inactive_post" android:scaleType="fitXY" android:adjustViewBounds="true" app:layout_aspectRatio="100%" app:layout_widthPercent="100%"/>
+    <ImageView android:id="@+id/inactive_post_icon_grid" android:visibility="gone" android:layout_width="24dp" android:layout_height="20dp" android:layout_margin="13dp" android:src="@drawable/inactive_post_icon" android:scaleType="fitCenter"/>
+</androidx.percentlayout.widget.PercentRelativeLayout>

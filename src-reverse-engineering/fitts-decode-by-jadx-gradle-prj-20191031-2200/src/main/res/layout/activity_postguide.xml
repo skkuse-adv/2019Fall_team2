@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:background="@drawable/app_bar" android:layout_width="match_parent" android:layout_height="48dp" app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="48dp" app:contentInsetStart="0dp">
+            <androidx.percentlayout.widget.PercentRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageButton android:id="@+id/closeButton" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/button_black_back" android:layout_centerVertical="true" android:paddingStart="24dp" android:paddingEnd="24dp"/>
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/post_guide_title" android:layout_centerVertical="true" android:layout_marginStart="10dp" android:layout_toEndOf="@+id/closeButton"/>
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:id="@+id/scrollview_create_post" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/app_bar">
+        <ImageView android:id="@+id/postGuideImageView" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

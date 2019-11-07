@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="23sp" android:textColor="#434344" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="47dp" android:layout_marginBottom="18dp" android:text="카테고리" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="23dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

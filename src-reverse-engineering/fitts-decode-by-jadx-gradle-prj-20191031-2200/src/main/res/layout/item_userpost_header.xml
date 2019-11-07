@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cover_layout" android:layout_width="0dp" android:layout_height="106dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:id="@+id/showroom_cover" android:layout_width="0dp" android:layout_height="0dp" android:scaleType="fitXY" android:adjustViewBounds="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <FrameLayout android:background="#1f1f24" android:layout_width="0dp" android:layout_height="0dp" android:alpha="0.5" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView android:textSize="28sp" android:textColor="#ffffff" android:id="@+id/profile_id" android:layout_width="0dp" android:layout_height="wrap_content" android:lineSpacingExtra="1dp" android:fontFamily="@font/proxima_nova_bold_italic" android:layout_marginStart="24dp" app:layout_constraintBottom_toBottomOf="@+id/cover_layout" app:layout_constraintEnd_toStartOf="@+id/profile" app:layout_constraintStart_toStartOf="0"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/profile" android:paddingBottom="28dp" android:layout_width="93dp" android:layout_height="wrap_content" android:layout_marginTop="59.5dp" android:layout_marginEnd="24dp" android:layout_alignParentEnd="true" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0">
+            <RelativeLayout android:id="@+id/image_profile" android:layout_width="93dp" android:layout_height="93dp">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profile_image" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <View android:background="@drawable/background_profile_fat" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <ImageButton android:id="@+id/modify_profile_image_button" android:background="@android:color/transparent" android:padding="11dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_insert_pic" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <Button android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/modify_profile_button" android:background="@drawable/round_button_showroom" android:padding="0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="28dp" android:layout_marginTop="8dp" android:text="프로필 수정" style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+            <Button android:textSize="13sp" android:textStyle="bold" android:id="@+id/follow_button" android:padding="0dp" android:layout_width="match_parent" android:layout_height="28dp" android:layout_marginTop="8dp" style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingTop="14dp" android:paddingBottom="21.3dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginEnd="5dp" app:layout_constraintEnd_toStartOf="@+id/profile" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/profile_id">
+            <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/profile_style" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/showroom_intro" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/postCountLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginStart="29dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                <TextView android:textSize="16sp" android:textColor="@color/gray6" android:gravity="center" android:id="@+id/post_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_bold"/>
+                <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/showroom_post"/>
+            </LinearLayout>
+            <Space android:id="@+id/headerBottomSpace" android:layout_width="0dp" android:layout_height="15dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/postCountLayout"/>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/followersLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="36dp" app:layout_constraintStart_toEndOf="@+id/postCountLayout" app:layout_constraintTop_toTopOf="@+id/postCountLayout">
+                <TextView android:textSize="16sp" android:textColor="@color/point" android:id="@+id/follower_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_bold"/>
+                <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/showroom_follower"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/following_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="36dp" app:layout_constraintStart_toEndOf="@+id/followersLayout" app:layout_constraintTop_toTopOf="@+id/followersLayout">
+                <TextView android:textSize="16sp" android:textColor="@color/point" android:gravity="center" android:id="@+id/following_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_bold"/>
+                <TextView android:textSize="11sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/showroom_following"/>
+            </LinearLayout>
+            <kr.co.popone.fitts.feature.home.PostListTypeControl android:id="@+id/postListTypeControl" android:layout_width="94dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+    </LinearLayout>
+    <Space android:layout_width="match_parent" android:layout_height="4dp"/>
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipeRefreshLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ScrollView android:id="@+id/contentLayout" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="26sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/titleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="@string/reward_usage_detail_pending_title"/>
+                    <TextView android:textSize="15sp" android:textColor="@color/gray6" android:id="@+id/descriptionTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="@string/reward_usage_detail_pending_message"/>
+                    <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/detailDescriptionTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34sp" android:text="@string/reward_usage_detail_pending_detail_message"/>
+                </LinearLayout>
+                <Space android:layout_width="match_parent" android:layout_height="36dp"/>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp"/>
+                <Space android:layout_width="match_parent" android:layout_height="33dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="상품 정보"/>
+                    <Button android:textSize="14sp" android:textStyle="bold" android:textColor="@color/point" android:id="@+id/showProductLinkButton" android:background="@drawable/button_background_product_link" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="상품 링크주소 확인"/>
+                    <androidx.gridlayout.widget.GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:columnCount="2">
+                        <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="100dp" android:layout_height="wrap_content" android:text="상품 옵션" app:layout_gravity="center_vertical"/>
+                        <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/productOptionTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_gravity="center_vertical"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="상품 가격" app:layout_gravity="center_vertical"/>
+                        <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/productPriceTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:fontFamily="@font/montserrat_bold" app:layout_gravity="center_vertical"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="배송비" app:layout_gravity="center_vertical"/>
+                        <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/shippingFeeTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:fontFamily="@font/montserrat_bold" app:layout_gravity="center_vertical"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="총 금액" app:layout_gravity="center_vertical"/>
+                        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/overallPriceTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:fontFamily="@font/montserrat_bold" app:layout_gravity="center_vertical"/>
+                        <View android:id="@+id/netPriceSeparator" android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="14dp" app:layout_columnSpan="2"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/netPriceLabel" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="사용예정 핏츠 포인트" app:layout_gravity="center_vertical"/>
+                        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/netPriceTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:fontFamily="@font/montserrat_bold" app:layout_gravity="center_vertical"/>
+                    </androidx.gridlayout.widget.GridLayout>
+                </LinearLayout>
+                <Space android:layout_width="match_parent" android:layout_height="29dp"/>
+                <View android:background="@color/gray6" android:layout_width="match_parent" android:layout_height="1dp"/>
+                <Space android:layout_width="match_parent" android:layout_height="35dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="배송지 정보"/>
+                <androidx.gridlayout.widget.GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:columnCount="2">
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="100dp" android:layout_height="wrap_content" android:text="수령인" app:layout_gravity="center_vertical"/>
+                    <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/nameTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_gravity="center_vertical"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="연락처" app:layout_gravity="center_vertical"/>
+                    <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/phoneNumberTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" app:layout_gravity="fill_horizontal"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="배송지" app:layout_gravity="center_vertical"/>
+                    <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/shippingAddressTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" app:layout_gravity="fill_horizontal"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="배송메모" app:layout_gravity="center_vertical"/>
+                    <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@color/gray6" android:id="@+id/shippingMemoTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="-" app:layout_gravity="fill_horizontal"/>
+                </androidx.gridlayout.widget.GridLayout>
+                <Button android:textSize="14sp" android:textStyle="bold" android:textColor="@color/point" android:id="@+id/cancelButton" android:background="@drawable/button_background_product_link" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="신청취소"/>
+                <Space android:layout_width="match_parent" android:layout_height="20dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

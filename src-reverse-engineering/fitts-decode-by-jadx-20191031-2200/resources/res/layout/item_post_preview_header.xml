@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.percentlayout.widget.PercentRelativeLayout android:id="@+id/post_cover_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/post_cover_image" android:scaleType="fitXY" android:adjustViewBounds="true" app:layout_aspectRatio="100%" app:layout_widthPercent="100%"/>
+        </androidx.percentlayout.widget.PercentRelativeLayout>
+        <LinearLayout android:orientation="vertical" android:padding="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignBottom="@+id/post_cover_layout">
+            <RatingBar android:id="@+id/post_rating" android:layout_width="wrap_content" android:layout_height="16dp" android:progressDrawable="@drawable/rating_bar_post" android:numStars="5" android:isIndicator="true"/>
+            <TextView android:textSize="29sp" android:textStyle="bold" android:textColor="#ffffff" android:ellipsize="end" android:id="@+id/post_title" android:paddingTop="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17.6dp" android:maxLines="6" android:shadowColor="#000000" android:shadowDx="1" android:shadowDy="1" android:shadowRadius="1"/>
+            <TextView android:textSize="11sp" android:textColor="#95989a" android:id="@+id/post_create_at" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="@string/preview_date"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="24dp" android:paddingTop="24dp" android:paddingRight="24dp" android:paddingBottom="22dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@+id/profile_image_layout" android:layout_width="66dp" android:layout_height="66dp" android:layout_marginTop="8dp" android:layout_alignParentEnd="true">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profile_image" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <View android:background="@drawable/background_profile_fat" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toStartOf="@+id/profile_image_layout">
+                <TextView android:textSize="14sp" android:textStyle="normal|bold|italic" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/post_profile_by" android:fontFamily="@font/proxima_nova_bold_italic"/>
+                <TextView android:textSize="20sp" android:textStyle="normal|bold|italic" android:textColor="@color/gray6" android:id="@+id/profile_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="9.5dp" android:fontFamily="@font/proxima_nova_bold_italic"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center" android:id="@+id/profile_type" android:layout_width="10dp" android:layout_height="10dp" android:tint="@color/gray4"/>
+                    <TextView android:textSize="15sp" android:textStyle="normal|bold|italic" android:textColor="@color/gray4" android:id="@+id/profile_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/proxima_nova_bold_italic"/>
+                </LinearLayout>
+                <TextView android:textSize="13sp" android:textColor="@color/gray5" android:id="@+id/profile_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="31dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="31dp">
+            <TextView android:textSize="14sp" android:textColor="@color/gray6" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="15dp" android:text="@string/post_product"/>
+            <RelativeLayout android:background="@drawable/grid_rounded" android:paddingLeft="17dp" android:paddingTop="13dp" android:paddingRight="17dp" android:paddingBottom="13dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerVertical="true" android:layout_toStartOf="@+id/product_image">
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="12sp" android:textColor="@color/gray3" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/post_product_store"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray3" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/post_product_price"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray3" android:id="@+id/postProductSizeLabel" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/post_product_size"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="15dp">
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/shop_name" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/product_price" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/product_size" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView android:id="@+id/product_image" android:layout_width="71dp" android:layout_height="71dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <Button android:textSize="15sp" android:textColor="#ffffff" android:background="@drawable/button_rounded_blue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="@string/post_product_detail" style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+</LinearLayout>

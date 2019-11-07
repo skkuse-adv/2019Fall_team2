@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="14sp" android:textColor="@drawable/selector_store_tab" android:id="@+id/tvTabTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <View android:id="@+id/viewDot" android:background="@drawable/fittie_suit_blue_dot" android:layout_width="5dp" android:layout_height="5dp" android:layout_marginBottom="1dp" android:layout_marginStart="5dp" app:layout_constraintBottom_toTopOf="@+id/tvTabTitle" app:layout_constraintStart_toEndOf="@+id/tvTabTitle"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/toolbarLayout" android:layout_width="match_parent" android:layout_height="48dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/view_toolbar_personalize_recommend"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipeRefreshLayout" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/personalizedRecommendLayout" android:visibility="visible" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="17sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:text="회원님의 체형과 스타일에 맞는\10취향 저격 포스트" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="24dp"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/recommendPostRecyclerView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+                <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+                <TextView android:textSize="17sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="회원님의 체형과 스타일이 비슷한 핏티" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="24dp"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/recomendedUserRecyclerView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="23dp" android:layout_marginBottom="34dp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

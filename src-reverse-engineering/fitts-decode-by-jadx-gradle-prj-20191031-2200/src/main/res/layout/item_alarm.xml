@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+    <RelativeLayout android:paddingTop="14dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="78dp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toStartOf="@+id/image_alarm_product">
+            <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profile_fitts" android:padding="1.25dp" android:visibility="gone" android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/alarm_notify" android:layout_marginEnd="6dp"/>
+            <FrameLayout android:id="@+id/profileImageFrame" android:layout_width="42dp" android:layout_height="42dp" android:layout_marginEnd="6dp">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profile_image" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <View android:background="@drawable/background_profile" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </FrameLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/alarm_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginEnd="6dp">
+                <TextView android:textSize="13sp" android:textColor="@color/gray6" android:ellipsize="end" android:id="@+id/alarm_message" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2"/>
+                <TextView android:textSize="11sp" android:textColor="@color/gray3" android:id="@+id/alarm_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <kr.co.popone.fitts.ui.custom.RoundImageView android:id="@+id/image_alarm_product" android:background="@drawable/background_corner_5dp_gray1_solid" android:visibility="gone" android:layout_width="46dp" android:layout_height="46dp" android:scaleType="fitXY" android:layout_alignParentEnd="true" app:round_radius="5dp"/>
+    </RelativeLayout>
+    <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+</LinearLayout>

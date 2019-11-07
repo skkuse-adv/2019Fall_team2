@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="23dp" android:layout_marginStart="20dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <TextView android:textSize="13sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="검색 결과가 없습니다. " android:fontFamily="@font/kopubdotum_pro_medium" android:letterSpacing="-0.02"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_search_result_icon"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

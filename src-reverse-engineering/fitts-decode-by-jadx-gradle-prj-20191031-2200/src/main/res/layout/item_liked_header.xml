@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginBottom="15dp">
+    <ImageView android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.1"/>
+    <TextView android:textSize="13sp" android:textColor="@color/gray4" android:id="@+id/like_post_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="24dp"/>
+    <View android:background="@color/gray0" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+</RelativeLayout>

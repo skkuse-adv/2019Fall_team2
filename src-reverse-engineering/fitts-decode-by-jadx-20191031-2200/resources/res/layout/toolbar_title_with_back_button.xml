@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="48dp">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar android:background="@drawable/app_bar" android:layout_width="match_parent" android:layout_height="match_parent" app:contentInsetStart="0dp">
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageButton android:id="@+id/buttonBack" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="0dp" android:src="@drawable/button_back" android:tint="#000000" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <TextView android:textSize="17sp" android:textColor="@color/gray6" android:id="@+id/textToolbarTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="14dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toEndOf="@+id/buttonBack" app:layout_constraintTop_toTopOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+</FrameLayout>

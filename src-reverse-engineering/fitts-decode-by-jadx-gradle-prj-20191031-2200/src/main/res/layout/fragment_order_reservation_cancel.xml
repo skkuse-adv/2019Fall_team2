@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/buttonContainer" android:paddingBottom="24dp" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+        <Button android:textSize="14sp" android:textColor="@color/point" android:id="@+id/orderDetailButton" android:background="@drawable/button_reward_use" android:layout_width="0dp" android:layout_height="53dp" android:layout_marginTop="13dp" android:text="주문 상세내역" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="25dp" android:layout_marginEnd="25dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="?android:attr/borderlessButtonStyle"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/buttonContainer" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/toolbarLayout" android:layout_width="match_parent" android:layout_height="48dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                <FrameLayout android:id="@+id/backButton" android:layout_width="wrap_content" android:layout_height="0dp" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="16.5dp" android:layout_height="16.5dp" android:src="@drawable/button_cancel"/>
+                </FrameLayout>
+                <View android:background="@color/gray0" android:layout_width="0dp" android:layout_height="0.5dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="63.5dp" android:layout_marginStart="24dp">
+                <TextView android:textSize="12sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="주문번호" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textOrderNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_regular" android:layout_marginStart="10dp"/>
+            </LinearLayout>
+            <TextView android:textSize="28sp" android:textColor="@color/gray6" android:id="@+id/textTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="24dp"/>
+            <TextView android:textSize="16sp" android:textColor="#434344" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="입금을 기다리는 동안 가격변동이 발생하여\10해당 주문이 취소되었어요." android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="24dp"/>
+            <TextView android:textSize="12sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.5dp" android:text="입금하신 금액과 현재 상품금액의 차이가 있는 경우\10주문진행이 어렵습니다. 양해부탁드립니다." android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="24dp"/>
+            <TextView android:textSize="15sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="31dp" android:text="구매를 희망하는 상품이 있다면\10주문서를 다시 작성해주시기 바랍니다." android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginStart="24dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

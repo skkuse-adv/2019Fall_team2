@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/post_image" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="fitXY" android:adjustViewBounds="true"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/post_image_description_layout" android:paddingLeft="24dp" android:paddingRight="24dp" android:paddingBottom="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_marginBottom="15dp" android:src="@drawable/quotes_img"/>
+            <TextView android:textSize="13sp" android:textColor="@color/gray6" android:id="@+id/post_image_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="7dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

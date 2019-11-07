@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<photopicker.widget.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <ImageView android:id="@+id/picture" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+        <FrameLayout android:id="@+id/border_overlay" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@+id/image_overlay_border" android:background="@drawable/shape_picker_item" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <FrameLayout android:layout_gravity="end" android:id="@+id/ordinal_textview" android:layout_width="65dp" android:layout_height="65dp">
+                <TextView android:textSize="14sp" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="end" android:id="@+id/image_number" android:background="@drawable/shape_picker_item_number" android:layout_width="26dp" android:layout_height="26dp" android:layout_margin="5dp"/>
+            </FrameLayout>
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="end" android:id="@+id/border_select" android:layout_width="65dp" android:layout_height="65dp">
+            <ImageView android:layout_gravity="end" android:layout_width="26dp" android:layout_height="26dp" android:layout_margin="5dp" android:src="@drawable/shape_picker_item_number_not"/>
+        </FrameLayout>
+    </FrameLayout>
+</photopicker.widget.SquareRelativeLayout>

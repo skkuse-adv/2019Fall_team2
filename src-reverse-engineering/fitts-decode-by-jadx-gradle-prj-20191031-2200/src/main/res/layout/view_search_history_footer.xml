@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/containerSearchText" android:paddingTop="18dp" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+    <TextView android:textSize="13sp" android:textColor="@color/gray5" android:id="@+id/tv_delete_search_history" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="검색 기록 삭제"/>
+</LinearLayout>

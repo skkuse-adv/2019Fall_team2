@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:background="@drawable/app_bar" android:layout_width="match_parent" android:layout_height="@dimen/appbar_height" app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/appbar_height" app:contentInsetStart="0dp">
+            <androidx.percentlayout.widget.PercentRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageButton android:id="@+id/back_button" android:background="@android:color/transparent" android:paddingLeft="@dimen/margin_horizontal" android:paddingRight="@dimen/margin_horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/button_back" android:tint="@color/gray6" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/preview_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+                <TextView android:textSize="14sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/done_size" android:background="@drawable/shape_picker_item_number" android:visibility="gone" android:layout_width="23dp" android:layout_height="23dp" android:layout_centerVertical="true" android:layout_marginEnd="4dp" android:layout_toStartOf="@+id/done_button"/>
+                <TextView android:textSize="17sp" android:textColor="@color/point" android:id="@+id/done_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="완료" android:layout_centerVertical="true" android:layout_marginEnd="24dp" android:layout_alignParentEnd="true"/>
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/app_bar">
+        <photopicker.widget.PreviewViewPager android:id="@+id/preview_pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <FrameLayout android:id="@+id/border_select" android:background="@drawable/shape_picker_item_number_not" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginTop="12dp" android:layout_marginEnd="24dp" android:layout_alignParentEnd="true"/>
+        <TextView android:textSize="14sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/ordinal_textview" android:background="@drawable/shape_picker_item_number" android:visibility="gone" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginTop="12dp" android:layout_marginEnd="24dp" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:background="@drawable/bottom_bar" android:layout_width="match_parent" android:layout_height="49dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

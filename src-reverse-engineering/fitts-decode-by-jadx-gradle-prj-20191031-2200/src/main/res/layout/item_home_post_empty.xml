@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/header" android:layout_width="match_parent" android:layout_height="45dp">
+        <ImageView android:background="@color/gray2" android:layout_width="0dp" android:layout_height="0dp" android:alpha="0.1" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/layout_home_header_title" android:layout_width="0dp" android:layout_height="45dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@android:color/black" android:gravity="center" android:id="@+id/bodyFilterButton1" android:layout_width="wrap_content" android:layout_height="0dp" android:text="내 체형 유사순" android:textAlignment="center" android:paddingStart="14dp" android:paddingEnd="14dp" android:layout_marginStart="10dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <TextView android:textSize="12sp" android:textColor="@color/gray4" android:gravity="center" android:id="@+id/bodyFilterButton2" android:layout_width="wrap_content" android:layout_height="0dp" android:text="전체" android:textAlignment="center" android:paddingStart="14dp" android:paddingEnd="14dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toEndOf="@+id/bodyFilterButton1" app:layout_constraintTop_toTopOf="0"/>
+            <kr.co.popone.fitts.feature.home.PostListTypeControl android:id="@+id/postListTypeControl" android:layout_width="94dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/contentLayout_empty" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="16sp" android:textColor="@color/gray4" android:paddingTop="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="아직 해당 체형의 포스트가 없어요 "/>
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/image_cry"/>
+        </LinearLayout>
+        <TextView android:textSize="16sp" android:textColor="@color/gray4" android:gravity="center" android:paddingTop="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="지금 포스팅하고 5만원 받아보세요!"/>
+        <Button android:textSize="17sp" android:textColor="@color/point" android:id="@+id/empty_create_post" android:background="@drawable/round_button" android:layout_width="146dp" android:layout_height="44dp" android:layout_marginTop="18dp" android:text="포스팅 하러 가기" android:fontFamily="@font/kopubdotum_pro_bold"/>
+    </LinearLayout>
+</RelativeLayout>

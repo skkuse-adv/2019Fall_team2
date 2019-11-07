@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/contentLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:background="@drawable/app_bar" android:layout_width="match_parent" android:layout_height="48dp" app:elevation="0dp">
+            <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="48dp" app:contentInsetStart="0dp">
+                <androidx.percentlayout.widget.PercentRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ImageButton android:id="@+id/back" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/button_back" android:tint="@color/gray6" android:paddingStart="24dp" android:paddingEnd="24dp"/>
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/withdrawal_title" android:layout_centerVertical="true" android:layout_marginStart="14dp" android:layout_toEndOf="@+id/back"/>
+                    <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/point" android:gravity="center_vertical" android:id="@+id/withdraw_done_button" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/withdrawal_onclick" android:paddingStart="24dp" android:paddingEnd="24dp" android:layout_alignParentEnd="true"/>
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="24dp" android:paddingTop="17dp" android:paddingRight="24dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="30sp" android:textStyle="bold" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/withdrawal_contents1"/>
+                <TextView android:textSize="30sp" android:textStyle="bold" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/withdrawal_contents2" android:drawablePadding="4dp" android:drawableEnd="@drawable/image_cry"/>
+                <EditText android:textSize="13sp" android:textColorHint="@color/gray2" android:gravity="top" android:background="@drawable/edit_text_rectangle1" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="96dp" android:layout_marginTop="20dp" android:hint="@string/withdrawal_contents_hint" android:paddingStart="14dp" android:paddingEnd="14dp"/>
+                <TextView android:textSize="14sp" android:textColor="@color/gray6" android:id="@+id/privacy_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="핏츠를 탈퇴하시면"/>
+                <TextView android:textSize="11sp" android:textColor="@color/gray6" android:id="@+id/privacyBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/withdrawal_privacy" android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <ProgressBar android:id="@+id/loading" android:visibility="gone" android:layout_width="50dp" android:layout_height="50dp" android:indeterminate="true" android:layout_centerInParent="true"/>
+</RelativeLayout>

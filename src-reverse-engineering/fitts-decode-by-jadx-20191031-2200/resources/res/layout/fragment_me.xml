@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:background="@drawable/app_bar" android:layout_width="0dp" android:layout_height="48dp" app:elevation="0dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="48dp" app:contentInsetStart="0dp">
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageButton android:id="@+id/button_me_setting" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/button_setting" android:layout_centerVertical="true" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <FrameLayout android:id="@+id/iconCart" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginEnd="13dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0">
+                    <ImageView android:layout_gravity="center" android:layout_width="23dp" android:layout_height="23dp" android:src="@drawable/img_icon_sb" android:layout_marginStart="11dp" android:layout_marginEnd="11dp"/>
+                    <TextView android:textSize="10.5sp" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/recommendationNewBadge" android:background="@drawable/bg_recommend_new_badge" android:visibility="gone" android:layout_width="16dp" android:layout_height="16dp" android:layout_marginTop="8dp" android:layout_marginEnd="3dp"/>
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:id="@+id/contentLayout" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/app_bar">
+        <LinearLayout android:orientation="vertical" android:paddingTop="24dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center" android:id="@+id/layout_me_profile_content" android:layout_width="match_parent" android:layout_height="84dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+                <FrameLayout android:id="@+id/profileImageFrame" android:layout_width="84dp" android:layout_height="84dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0">
+                    <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profile_image" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <View android:background="@drawable/background_profile_fat" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                </FrameLayout>
+                <TextView android:textSize="28sp" android:textColor="@color/gray6" android:id="@+id/fittsIDTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:fontFamily="@font/proxima_nova_bold_italic" android:layout_marginEnd="15dp" app:layout_constraintEnd_toStartOf="@+id/profileImageFrame" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <Button android:textSize="17sp" android:textStyle="bold" android:textColor="@color/point" android:id="@+id/showShowroomButton" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="30dp" android:text="@string/go_showroom" android:drawablePadding="10dp" android:drawableEnd="@drawable/button_nav_next_blue" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/fittsIDTextView"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="37dp"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="75dp">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/fittsPointLayout" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="13dp" android:layout_height="13dp" android:src="@drawable/img_icon_fittspoint" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_marginEnd="10.2dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="핏츠 포인트" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </LinearLayout>
+                    <TextView android:textSize="15sp" android:textColor="@color/point" android:gravity="end" android:id="@+id/textFittsPoint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_bold"/>
+                </LinearLayout>
+                <View android:background="@color/gray2" android:layout_width="0.5dp" android:layout_height="match_parent"/>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/fittsCouponLayout" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="13dp" android:layout_height="13dp" android:src="@drawable/img_icon_coupon" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_marginEnd="10.2dp"/>
+                        <TextView android:textSize="12sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="쿠폰" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                    </LinearLayout>
+                    <TextView android:textSize="15sp" android:textColor="@color/point" android:gravity="end" android:id="@+id/fittsCouponCountTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_bold"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageBanner" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/fittie_list" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/orderListLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                    <RelativeLayout android:paddingTop="21dp" android:paddingBottom="21dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/orderListIconImageView" android:layout_width="21dp" android:layout_height="16dp" android:src="@drawable/img_icon_shipping" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_marginEnd="10.2dp"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="전체 주문 내역" android:layout_centerVertical="true" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_toEndOf="@+id/orderListIconImageView"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:tint="@color/gray5" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/wishListLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                    <RelativeLayout android:paddingTop="21dp" android:paddingBottom="21dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/wishListIconImageView" android:layout_width="19dp" android:layout_height="17dp" android:src="@drawable/img_icon_wish_black" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_marginEnd="10.2dp"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="찜 목록" android:layout_centerVertical="true" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_toEndOf="@+id/wishListIconImageView"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:tint="@color/gray5" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/bookmarkListLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                    <RelativeLayout android:paddingTop="21dp" android:paddingBottom="21dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/bookmarkIconImageView" android:layout_width="19dp" android:layout_height="17dp" android:src="@drawable/img_icon_bookmark" android:scaleType="fitCenter" android:layout_centerVertical="true" android:paddingStart="3dp" android:paddingEnd="3dp" android:layout_marginEnd="10.2dp"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="즐겨찾기 목록" android:layout_centerVertical="true" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_toEndOf="@+id/bookmarkIconImageView"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:tint="@color/gray5" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/likedListButton" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:paddingTop="21dp" android:paddingBottom="21dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                        <ImageView android:id="@+id/image_like_fittee" android:layout_width="19dp" android:layout_height="17dp" android:src="@drawable/button_home_unlike" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_marginEnd="10.2dp"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/me_like" android:layout_centerVertical="true" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_toEndOf="@+id/image_like_fittee"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:tint="@color/gray5" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/invitationButton" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:paddingTop="21dp" android:paddingBottom="21dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                        <ImageView android:id="@+id/image_invitation" android:layout_width="17dp" android:layout_height="17dp" android:src="@drawable/icon_invitation" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_marginEnd="10.2dp"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/point" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="친구 초대" android:includeFontPadding="false" android:drawablePadding="6dp" android:layout_centerVertical="true" android:drawableEnd="@drawable/img_invitation_point" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_toEndOf="@+id/image_invitation"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:tint="@color/gray5" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/pointGuideLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:paddingTop="21dp" android:paddingBottom="21dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                        <ImageView android:id="@+id/pointGuideIconImageView" android:layout_width="19dp" android:layout_height="21dp" android:src="@drawable/img_icon_benefit" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_marginEnd="10.2dp"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="핏티만의 특별한 혜택" android:layout_centerVertical="true" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_toEndOf="@+id/pointGuideIconImageView"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:tint="@color/gray5" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/eventLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:paddingTop="21dp" android:paddingBottom="21dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                        <ImageView android:id="@+id/eventIconImageView" android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/img_icon_event" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_marginEnd="10.2dp"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="이벤트" android:layout_centerVertical="true" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_toEndOf="@+id/eventIconImageView"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:tint="@color/gray5" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <View android:background="@color/gray2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/serviceCenterLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:paddingTop="21dp" android:paddingBottom="21dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                        <ImageView android:id="@+id/serviceCenterIconImageView" android:layout_width="21dp" android:layout_height="20dp" android:src="@drawable/icon_service_center" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_marginEnd="7dp"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/gray6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="스토어 고객센터" android:layout_centerVertical="true" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_toEndOf="@+id/serviceCenterIconImageView"/>
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_nav_next" android:tint="@color/gray5" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.percentlayout.widget.PercentRelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:tag="transition_alpha4" android:layout_height="match_parent" android:layout_alignParentStart="true" app:layout_aspectRatio="100%" app:layout_widthPercent="33%">
+            <ImageView android:paddingBottom="3dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-60dp" android:src="@drawable/img_intro_07" android:scaleType="fitXY"/>
+            <ImageView android:paddingBottom="3dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/img_intro_08" android:scaleType="fitXY" android:adjustViewBounds="true"/>
+            <RelativeLayout android:tag="transition1" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/transition_below" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/img_intro_04" android:scaleType="fitXY" android:adjustViewBounds="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:tag="transition_scale1" android:layout_height="match_parent" android:layout_centerHorizontal="true" app:layout_aspectRatio="100%" app:layout_widthPercent="33%">
+            <ImageView android:paddingBottom="3dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-60dp" android:src="@drawable/img_intro_07" android:scaleType="fitXY"/>
+            <ImageView android:paddingBottom="3dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/img_intro_08" android:scaleType="fitXY" android:adjustViewBounds="true"/>
+            <RelativeLayout android:tag="transition_scale" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/transition_center" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/img_intro_big" android:scaleType="fitXY" android:adjustViewBounds="true"/>
+                <ImageView android:tag="transition_center" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/img_intro_big_text" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_below="@+id/transition_center" android:layout_alignStart="@+id/transition_center" android:layout_alignEnd="@+id/transition_center"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:tag="transition_alpha6" android:layout_height="match_parent" android:layout_alignParentEnd="true" app:layout_aspectRatio="100%" app:layout_widthPercent="33%">
+            <ImageView android:paddingBottom="3dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-60dp" android:src="@drawable/img_intro_07" android:scaleType="fitXY"/>
+            <ImageView android:paddingBottom="3dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/img_intro_08" android:scaleType="fitXY" android:adjustViewBounds="true"/>
+            <RelativeLayout android:tag="transition2" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/transition_top" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/img_intro_09" android:scaleType="fitXY" android:adjustViewBounds="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+    <TextView android:textSize="19sp" android:textColor="#000000" android:tag="bottom" android:paddingLeft="28dp" android:paddingRight="28dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="89dp" android:text="@string/string_intro3" android:layout_alignParentBottom="true" android:lineSpacingExtra="5sp" android:fontFamily="@font/kopubdotum_pro_bold"/>
+</RelativeLayout>

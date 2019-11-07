@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/layoutContainer" android:background="@drawable/background_round_gray0_gray1" android:layout_width="match_parent" android:layout_height="34dp" android:paddingStart="15dp" android:paddingEnd="15dp">
+    <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textMonth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2018년 8월" android:fontFamily="@font/kopubdotum_pro_medium"/>
+    <View android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <TextView android:textSize="13sp" android:textColor="@color/gray6" android:gravity="end" android:id="@+id/textPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_regular"/>
+</LinearLayout>

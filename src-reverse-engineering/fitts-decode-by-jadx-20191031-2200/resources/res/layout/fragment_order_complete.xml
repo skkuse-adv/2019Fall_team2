@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/buttonContainer" android:paddingBottom="24dp" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+        <Button android:textSize="14sp" android:textColor="@color/point" android:id="@+id/buttonOrderDetail" android:background="@drawable/button_reward_use" android:layout_width="0dp" android:layout_height="53dp" android:layout_marginTop="13dp" android:text="주문 상세내역" android:layout_weight="1" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="25dp" android:layout_marginEnd="2dp" style="?android:attr/borderlessButtonStyle"/>
+        <Button android:textSize="14sp" android:textColor="@android:color/white" android:id="@+id/buttonGoPosting" android:background="@drawable/button_rounded_event_apply" android:layout_width="0dp" android:layout_height="53dp" android:layout_marginTop="13dp" android:text="포스팅 하러가기" android:layout_weight="1" android:fontFamily="@font/kopubdotum_pro_bold" android:layout_marginStart="2dp" android:layout_marginEnd="25dp" style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/buttonContainer" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/toolbarLayout" android:layout_width="match_parent" android:layout_height="48dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                <FrameLayout android:id="@+id/backButton" android:layout_width="wrap_content" android:layout_height="0dp" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="16.5dp" android:layout_height="16.5dp" android:src="@drawable/button_cancel"/>
+                </FrameLayout>
+                <View android:background="@color/gray0" android:layout_width="0dp" android:layout_height="0.5dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="72dp" android:layout_marginStart="24dp">
+                <TextView android:textSize="12sp" android:textColor="@color/gray5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="주문번호" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                <TextView android:textSize="12sp" android:textColor="@color/gray6" android:id="@+id/textOrderNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/montserrat_regular" android:layout_marginStart="10dp"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageOrderState" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="34dp"/>
+            <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+            <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+                <TableRow>
+                    <TextView android:textSize="13sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="주문 상품" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="23dp"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/gray6" android:ellipsize="end" android:id="@+id/textOption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="250dp" android:maxLines="1" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="6dp">
+                    <TextView android:textSize="13sp" android:textColor="@color/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/kopubdotum_pro_medium" android:layout_marginEnd="23dp"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/gray6" android:ellipsize="end" android:id="@+id/textDetailOption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200dp" android:maxLines="1" android:fontFamily="@font/kopubdotum_pro_medium"/>
+                </TableRow>
+            </TableLayout>
+            <View android:background="@color/gray1" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="20dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
