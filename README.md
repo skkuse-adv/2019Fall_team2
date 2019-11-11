@@ -8,11 +8,11 @@
 * Target system: Personalization, Fitts (https://www.fitts.co.kr)
 * Milestone: https://github.com/skkuse-adv/2019Fall_team2/milestones
 * The major goal of this team project is to generate enhanced architecture desigin finally after executing the below steps. 
-   * Choose one among target systems (e.g., personnalization) 
-   * :tree: Milestone 1: Write a document after analyzing a target system
-   * :tree: Milestone 2: Write a document for a requirement specification
-   * :tree: Milestone 3: Write a document for a target system architecture
-   * :tree: Milestone 4: Write a document to propose an architecture model based on ADD finally.
+   * Choose one among popular target systems (e.g., personnalization) 
+   * :fire: Milestone 1: Write the proposal document after analyzing briefly target system
+   * :fire: Milestone 2: Write the system requirement document for a requirement specification
+   * :fire: Milestone 3: Write the system design document for a target system architecture
+   * :fire: Milestone 4: Write the enhanced system design based on ADD to propose new architecture model finally.
 
 
 ## Members
