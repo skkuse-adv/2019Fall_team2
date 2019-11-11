@@ -5,13 +5,14 @@
 ![Gitter](https://img.shields.io/gitter/room/skkuse-adv/2019Fall_team2) ![GitHub repo size](https://img.shields.io/github/repo-size/skkuse-adv/2019Fall_team2) ![GitHub issues](https://img.shields.io/github/issues/skkuse-adv/2019Fall_team2) ![GitHub pull requests](https://img.shields.io/github/issues-pr/skkuse-adv/2019Fall_team2) ![GitHub contributors](https://img.shields.io/github/contributors/skkuse-adv/2019Fall_team2)
 
 ## Introduction
+* Target system: Personalization, Fitts (https://www.fitts.co.kr)
 * Milestone: https://github.com/skkuse-adv/2019Fall_team2/milestones
 * The major goal of this team project is to generate enhanced architecture desigin finally after executing the below steps. 
-   * Choose one among e-commerces
-   * Write a document after analyzing a target system
-   * Write a document for a requirement specification
-   * Write a document for a target system architecture
-   * Write a document to propose an architecture model based on ADD finally.
+   * Choose one among target systems (e.g., personnalization) 
+   * :tree: Milestone 1: Write a document after analyzing a target system
+   * :tree: Milestone 2: Write a document for a requirement specification
+   * :tree: Milestone 3: Write a document for a target system architecture
+   * :tree: Milestone 4: Write a document to propose an architecture model based on ADD finally.
 
 
 ## Members
@@ -28,7 +29,8 @@
 ```bash
 PROJECT ROOT
 ├─doc: Documentation of the project
-└─reverse-engineering: decompiled source files, analysis, diagrams.
+└─analysis
+    reverse-engineering: decompiled source files, analysis, diagrams.
     └─fitts-decompiled
         ├─build
         ├─config
