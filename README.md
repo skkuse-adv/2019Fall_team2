@@ -33,13 +33,13 @@
 ```bash
 PROJECT ROOT
 .
-|-- README.md
-|-- analysis
+|-- README.md (This file)
+|-- analysis (decompiling the mobile applications, Generating pseudo codes, Restoring resource files, and so on)
 |   `-- reverse-engineering
-|       |-- decompile-fitts-20191031-2200 (Resource-based)
+|       |-- decompile-fitts-20191031-2200 (Resource-based decompilation)
 |       |   |-- resources
 |       |   `-- sources
-|       `-- decompile-fitts-with-gradle-20191031-2200 (Gradle-based)
+|       `-- decompile-fitts-with-gradle-20191031-2200 (Gradle-based decompilation)
 |           |-- build.gradle
 |           `-- src
 |
