@@ -43,6 +43,8 @@ PROJECT ROOT
 |           |-- build.gradle
 |           `-- src
 |
-`-- docs
+|-- docs
+|   `-- Proposal.pptx
+|   `-- Requirement Specification.docx
 
 ```
