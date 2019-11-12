@@ -43,8 +43,14 @@ PROJECT ROOT
 |           |-- build.gradle
 |           `-- src
 |
-|-- docs
-|   `-- Proposal.pptx
-|   `-- Requirement Specification.docx
-
+ `-- docs
+     `-- Proposal.pptx
+     `-- Requirement Specification.docx
+     `-- TBA: Milestone 3 (TODO)
+     `-- TBA: Milestone 4 (TODO)
 ```
+
+## Terminology
+* SD: System Design
+* TBA: To Be Appended
+* M: Milestone (e.g., M1, M2, M3, and M4)
