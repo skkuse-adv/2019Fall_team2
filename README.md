@@ -44,8 +44,8 @@ PROJECT ROOT
 |           `-- src
 |
  `-- docs
-     `-- Proposal.pptx
-     `-- Requirement Specification.docx
+     `-- Proposal.pptx (Milestone 1)
+     `-- Requirement Specification.docx (Milestone 2)
      `-- TBA: Milestone 3 (TODO)
      `-- TBA: Milestone 4 (TODO)
 ```
