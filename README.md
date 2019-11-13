@@ -44,13 +44,15 @@ PROJECT ROOT
 |           `-- src
 |
  `-- docs
-     `-- Proposal.pptx (Milestone 1)
-     `-- Requirement Specification.docx (Milestone 2)
-     `-- TBA: Milestone 3 (TODO)
-     `-- TBA: Milestone 4 (TODO)
+     `-- Milestone1: Proposal.pptx  
+     `-- Milestone2: Requirement Specification.docx 
+     `-- Milestone3: WIP
+     `-- Milestone4: TBA 
 ```
 
 ## Terminology
 * SD: System Design
 * TBA: To Be Appended
+* TBD: To Be Defined
+* WIP: Work-In-Progress
 * M: Milestone (e.g., M1, M2, M3, and M4)
