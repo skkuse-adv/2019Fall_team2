@@ -46,7 +46,7 @@ PROJECT ROOT
  `-- docs
      `-- Milestone1: Proposal.pptx  
      `-- Milestone2: Requirement Specification.docx 
-     `-- Milestone3: WIP
+     `-- Milestone3: System Design.docx
      `-- Milestone4: TBA 
 ```
 
