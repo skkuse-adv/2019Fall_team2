@@ -17,6 +17,7 @@
    * :necktie: Milestone 2: Write the system requirement document for a requirement specification
    * :necktie: Milestone 3: Write the system design document for a target system architecture
    * :necktie: Milestone 4: Write the enhanced system design based on ADD to propose new architecture model finally.
+      * :page_with_curl: Kanban Board: [[M4] ADD-based Fitts System Design](https://github.com/skkuse-adv/2019Fall_team2/projects/1)
 
 
 ## Members
