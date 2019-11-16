@@ -9,15 +9,16 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/skkuse-adv/2019Fall_team2) 
 
 ## Introduction
-* Target system: Personalization, Fitts (https://www.fitts.co.kr)
-* Milestone: https://github.com/skkuse-adv/2019Fall_team2/milestones
+
 * The major goal of this team project is to generate enhanced architecture desigin finally after executing the below steps. 
    * Choose one among popular target systems (e.g., personnalization) 
-   * :necktie: Milestone 1: Write the proposal document after analyzing briefly target system
-   * :necktie: Milestone 2: Write the system requirement document for a requirement specification
-   * :necktie: Milestone 3: Write the system design document for a target system architecture
-   * :necktie: Milestone 4: Write the enhanced system design based on ADD to propose new architecture model finally.
-      * :page_with_curl: Kanban Board: [[M4] ADD-based Fitts System Design](https://github.com/skkuse-adv/2019Fall_team2/projects/1)
+      * Target system: Personalization, Fitts (https://www.fitts.co.kr)
+   * Milestone: https://github.com/skkuse-adv/2019Fall_team2/milestones
+      * :necktie: Milestone 1: Write the proposal document after analyzing briefly target system
+      * :necktie: Milestone 2: Write the system requirement document for a requirement specification
+      * :necktie: Milestone 3: Write the system design document for a target system architecture
+      * :necktie: Milestone 4: Write the enhanced system design based on ADD to propose new architecture model finally.
+         * :page_with_curl: Kanban Board: [[M4] ADD-based Fitts System Design](https://github.com/skkuse-adv/2019Fall_team2/projects/1)
 
 
 ## Members
