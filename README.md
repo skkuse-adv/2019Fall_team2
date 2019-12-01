@@ -24,9 +24,9 @@
 ## Members
 | Full Name   | GitHub ID   | E-mail                        | R&R |
 |-------------|-------------|-------------------------------|---------------------------------|
-| 빙          | beandkay    | tinyswish@gmail\.com          | Design, Analysis, Documentation, System Requirement,  Review Input, ADD-iteration3 |
-| 임근식       | leemgs     | leemgs@gmail\.com             | Design, Analysis, Documentation, Design Purpose,ADD-iteration1,2 |
-| 하지크       | ajid951125 | haziqhamzah951125@gmail\.com  | Design, Analysis, Documentation, System Requirement, ADD-iteration4 |
+| 빙          | beandkay    | tinyswish@gmail\.com          | Design, Analysis, Documentation, System Requirement,  Review Input, ADD-iteration3, GitHub Issue, Review&Merging |
+| 임근식       | leemgs     | leemgs@gmail\.com             | Design, Analysis, Documentation, Reverse Engineering, Design Purpose,ADD-iteration1&2,  Review&Merging |
+| 하지크       | ajid951125 | haziqhamzah951125@gmail\.com  | Design, Analysis, Documentation, System Requirement, ADD-iteration4, Review&Merging |
 | 장한빈       | JangHanBin | espoirnoa09@gmail\.com        | - |
 
 
