@@ -1,3 +1,5 @@
+This page describes how we analyze the internals of the existing Fitts system after downloading the binary software package.
+
 * The reverse engineering tool to analyze the Android application (e.g., Fitts). 
    * fitts.apk - https://www.apkfollow.com/app/fitts-pisceu-naege-ddag-majneun-piseul-cajda/kr.co.popone.fitts/
    * Java decompiler - https://github.com/skylot/jadx
