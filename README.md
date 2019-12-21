@@ -49,7 +49,7 @@ PROJECT ROOT
      `-- Milestone1: Proposal.pptx  
      `-- Milestone2: Requirement Specification.docx 
      `-- Milestone3: System Design.docx
-     `-- Milestone4: TBA 
+     `-- Milestone4: ADD Iteration Final.docx (ADD-based Architecture Model) 
 ```
 
 ## Terminology
